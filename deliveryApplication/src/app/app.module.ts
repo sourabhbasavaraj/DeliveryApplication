@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { PackageEstimatorComponent } from './package-estimator/package-estimator.component';
+import { CustomerLoginComponent } from './login/customer-login/customer-login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PackageEstimatorComponent,
+    CustomerLoginComponent
   ],
   imports: [
     BrowserModule,
