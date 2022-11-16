@@ -4,33 +4,28 @@
 
 <!-- NavBar Starting for the customer login -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" routerLink="/home" routerLinkActive="active">D2D</a>
+    <a class="navbar-brand" routerLink="/home" routerLinkActive="active"><h1 class=""><i class="fa fa-truck mr-2"></i>D2D</h1></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Track Order</a>
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+          <a class="nav-link" href="#">Track Consignment</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+          <a class="nav-link" href="#">Modify Order</a>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Shipping Details
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Shipping Information</a>
-              <a class="dropdown-item" href="#">Modify Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+            <a class="nav-link" href="#">Shipping Information</a>
           </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Account Details</a>
         </li>
-        <li style="margin-left: 1100px;">
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+            <a class="nav-link" routerLink="/rateUs" routerLinkActive="active">Rate Us</a>
+          </li>
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">    
         </li>
         <li>
@@ -39,12 +34,21 @@
       </ul>
     </div>
   </nav>
-<!-- Navbar ending for the customer login page -->
+<!-- Navbar ending for the customer login page -->   
+<section class="deliveryImage">
+    <div >
+        <h2>Services spread across 23 states & 5 Union Territories.</h2>
+    </div>
+</section>
+
+<!-- Start of the address and payment part -->
+
+
 
 <form class="form-inline" action="payment">
     <div><h3> 1. Address Information for the shipment</h3></div>
     <div><h4> <span> &emsp;</span> Enter your (FROM) address and the recipient's (TO) address</h4></div>
-    <table>
+    <table class="mainAddressTable">
         <tr>
             <td>
                 <h6>From Address</h6>
@@ -244,9 +248,10 @@
         </tr>
         
         <!-- 7th Row End -->
+        <button type="submit" class="btn btn-primary mb-2"  disabled="disabled">Continue</button>
     </table>
     
-    <button type="submit" class="btn btn-primary mb-2"  disabled="disabled">Continue</button>
+    
 </form>
 
 <!-- End of the collection of the address -->
@@ -255,12 +260,10 @@
 <br>
 
 <form action="" class="payment">
-    <table>
-        <th>
-            <div>
-                <h4>2. Payment Details</h4>
-            </div>
-        </th>
+    <div>
+        <h4>2. Payment Details</h4>
+    </div>
+    <table class="mainPaymentTable">
         <tr>
                 <td>
                     <div>

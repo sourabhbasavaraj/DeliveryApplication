@@ -8,6 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PackageEstimatorComponent } from './package-estimator/package-estimator.component';
 import { CustomerLoginComponent } from './login/customer-login/customer-login.component';
+import { NearMeComponent } from './near-me/near-me.component';
+import {GoogleMapsModule} from '@angular/google-maps';
+import { RateUsCompComponent } from './rate-us-comp/rate-us-comp.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { CustomerLoginComponent } from './login/customer-login/customer-login.co
     LoginComponent,
     RegisterComponent,
     PackageEstimatorComponent,
-    CustomerLoginComponent
+    CustomerLoginComponent,
+    NearMeComponent,
+    RateUsCompComponent
   ],
   imports: [
     BrowserModule,
