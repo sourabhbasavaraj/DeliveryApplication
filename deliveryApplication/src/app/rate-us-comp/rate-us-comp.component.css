@@ -1,0 +1,31 @@
+.rateUsForm{
+   max-width: 600px;
+   margin: auto;
+   font-family: Poppins;
+   position: relative;
+   font-weight: bold;
+   text-transform: uppercase;
+   /* font-family: 'Steelfish Rg', 'helvetica neue',
+            helvetica, arial, sans-serif; */
+   font-weight: 800;
+   
+   
+}
+.rateUsContent{
+    position: relative;
+}
+
+.bgImg{
+    background-image: url(../../assets/bgImage.jpg);
+    background-repeat: repeat;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    height: 100%; 
+    width: 100%;
+  
+    -webkit-font-smoothing: antialiased;
+    
+}
