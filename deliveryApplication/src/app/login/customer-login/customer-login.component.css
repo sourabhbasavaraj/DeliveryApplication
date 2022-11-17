@@ -2,7 +2,6 @@
    max-width: 800px;
    margin: auto;
    font-family: Poppins;
-   
 }
 
 .payment{
@@ -33,9 +32,9 @@
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: 'Steelfish Rg', 'helvetica neue',
-             helvetica, arial, sans-serif;
     font-weight: 800;
     -webkit-font-smoothing: antialiased;
-    padding:200px 200px 200px 200px;
+    padding: 200px 200px 200px 200px;
+    opacity: 0.8;
+
 }
