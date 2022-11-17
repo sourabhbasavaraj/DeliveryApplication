@@ -38,3 +38,20 @@
     opacity: 0.8;
 
 }
+
+.card-body{
+    margin-left: 28px;
+}
+
+.cardAnchorStyling{
+   color: black;
+    text-decoration: none;
+}
+    
+
+.cardAnchorStyling:hover {
+    color:black; 
+    text-decoration:none; 
+    cursor:pointer;  
+    background-color:violet ;
+}

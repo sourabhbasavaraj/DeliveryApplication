@@ -11,6 +11,7 @@ import { CustomerLoginComponent } from './login/customer-login/customer-login.co
 import { NearMeComponent } from './near-me/near-me.component';
 import {GoogleMapsModule} from '@angular/google-maps';
 import { RateUsCompComponent } from './rate-us-comp/rate-us-comp.component';
+import { DropOffPackageComponent } from './drop-off-package/drop-off-package.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RateUsCompComponent } from './rate-us-comp/rate-us-comp.component';
     PackageEstimatorComponent,
     CustomerLoginComponent,
     NearMeComponent,
-    RateUsCompComponent
+    RateUsCompComponent,
+    DropOffPackageComponent
   ],
   imports: [
     BrowserModule,

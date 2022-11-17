@@ -7,6 +7,7 @@ import { PackageEstimatorComponent } from './package-estimator/package-estimator
 import { CustomerLoginComponent } from './login/customer-login/customer-login.component';
 import { NearMeComponent } from './near-me/near-me.component';
 import { RateUsCompComponent } from './rate-us-comp/rate-us-comp.component';
+import { DropOffPackageComponent } from './drop-off-package/drop-off-package.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path:'getEstimate', component:PackageEstimatorComponent},
   { path: 'customerLogin', component: CustomerLoginComponent},
   { path:'nearMe', component: NearMeComponent},
-  { path:'rateUs', component: RateUsCompComponent}
+  { path:'rateUs', component: RateUsCompComponent},
+  { path:'dropOffPackage', component:DropOffPackageComponent}
 ];
 
 @NgModule({
