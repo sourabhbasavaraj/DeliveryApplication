@@ -13,6 +13,14 @@ import { CustomerLoginComponent } from './login/customer-login/customer-login.co
 import { NearMeComponent } from './near-me/near-me.component';
 import { RateUsCompComponent } from './rate-us-comp/rate-us-comp.component';
 import { DropOffPackageComponent } from './drop-off-package/drop-off-package.component';
+import { AdminComponent } from './admin/admin.component';
+import { CouponComponent } from './admin/coupon/coupon.component';
+import { WarehouseInfoComponent } from './admin/warehouse-info/warehouse-info.component';
+import { InventoryInfoComponent } from './admin/inventory-info/inventory-info.component';
+import { AboutComponent } from './about/about.component';
+import { ServicesComponent } from './services/services.component';
+import { PriceComponent } from './price/price.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent},
@@ -28,7 +36,15 @@ const routes: Routes = [
   { path:'agent/pickup', component: UpdatePickupComponent},
   { path:'agent/reschedule', component: RescheduleDeliveryComponent},
   { path:'agent/notify', component: NotifyUserComponent},
-  { path:'dropOffPackage', component:DropOffPackageComponent}
+  { path:'dropOffPackage', component:DropOffPackageComponent},
+  {path:'admin', component: AdminComponent},
+  {path:'coupon', component: CouponComponent},
+  {path: 'wareouseinfo', component: WarehouseInfoComponent},
+  {path: 'inventoryinfo', component: InventoryInfoComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'services', component: ServicesComponent},
+  {path: 'price', component:PriceComponent},
+  {path: 'contact', component:ContactComponent}
 ];
 
 @NgModule({

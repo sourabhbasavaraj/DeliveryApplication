@@ -10,11 +10,10 @@
       </button>
       <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
           <div class="navbar-nav m-auto py-0">
-              <a href="index.html" class="nav-item nav-link ">Home</a>
-              <a href="about.html" class="nav-item nav-link">About</a>
-              <a href="service.html" class="nav-item nav-link">Services</a>
-              <a href="price.html" class="nav-item nav-link">Price</a>
-              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            <a href="index.html" class="nav-item nav-link ">Home</a>
+            <a href="/about" class="nav-item nav-link">About</a>
+            <a href="/services" class="nav-item nav-link">Services</a>
+            <a href="/contact" class="nav-item nav-link">Contact</a>
           </div>
 
           <div class="nav-item dropdown">
@@ -23,7 +22,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="/login">Customers</a>
-              <a class="dropdown-item" href="#">Admin/Wearhouse Manager</a>
+              <a class="dropdown-item" routerLink="/admin">Admin/Wearhouse Manager</a>
               <a class="dropdown-item" href="#">Delivery Partner</a>
             </div>
           </div>
@@ -52,41 +51,7 @@
 <!-- Header End -->
 
 
-<!-- About Start -->
- <div class="container-fluid py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 pb-4 pb-lg-0">
-                <img class="img-fluid w-100" src="../../assets/about.jpg" alt="">
-                <div class="bg-dark text-dark text-center p-4">
-                    <h3 class="text-light m-0">25+ Years Experience</h3>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <h6 class="text-uppercase font-weight-bold" style="color: #3d7e70;">About Us</h6>
-                <h1 class="mb-4">Trusted & Faster Logistic Service Provider</h1>
-                <p class="mb-4">Since in 2019, D2D is public listed company on New York Stock Exchange with a Market capitalization of USD 4.67 billion (as on 31th March, 2022), we grown into a nationally renowned logistics and transport company which is also currently the largest fleet owner of commercial vehicles in USA. VRL has pioneered in providing a safe and reliable logistics network in the field of parcel service, ensuring last mile delivery even in remote locations. We integrated hub-and-spoke operating model which enables optimal aggregation of consignments from a diversified customer base across multiple industries and locations</p>
-            </div>
-        </div>
-    </div>
-    <!-- Video Modal -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- About End -->
+
 
 <!-- Services Start -->
 <div class="container-fluid pt-5">
@@ -97,38 +62,28 @@
         </div>
         <a  routerLink="/getEstimate" routerLinkActive="active" ></a>
           <div class="row pb-3">
-                <div class="col-lg-3 col-md-6 text-center mb-5">
+                <div class="col text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4 p-4" style="background-color: #3d7e70;">
                         <i class="fa fa-2x fa-plane text-dark pr-3"></i>
-                        <h6 class="text-white font-weight-medium m-0"><a  routerLink="/getEstimate" routerLinkActive="active" >Get Estimate</a></h6>
+                        <h6 class="text-white font-weight-medium m-0"><a  routerLink="/getEstimate" routerLinkActive="active" style="color:white">Get Estimate</a></h6>
                     </div>
                     <p>Get a approximate value according to the weight and the distance the parcel has to be delivered.</p>
-                    <a class="text-dark border-bottom text-decoration-none" href="">Read More</a>
                 </div>
 
-              <div class="col-lg-3 col-md-6 text-center mb-5">
+              <div class="col text-center mb-5">
                 <div class="d-flex align-items-center justify-content-center mb-4 p-4" style="background-color: #3d7e70;">
                     <i class="fa fa-2x fa-truck text-dark pr-3"></i>
-                    <h6 class="text-white font-weight-medium m-0"><a  routerLink="/nearMe" routerLinkActive="active" >Wearhouse near me!</a></h6>
+                    <h6 class="text-white font-weight-medium m-0"><a  routerLink="/nearMe" routerLinkActive="active"style="color:white" >Wearhouse near me!</a></h6>
                 </div>
                 <p>Find our nearest store to your home for a quick drop-off of your packages!</p>
-                <a class="text-dark border-bottom text-decoration-none" href="">Read More</a>
             </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5">
+
+            <div class="col  text-center mb-5">
                 <div class="d-flex align-items-center justify-content-center mb-4 p-4" style="background-color: #3d7e70;">
                     <i class="fa fa-2x fa-store text-dark pr-3"></i>
-                    <h6 class="text-white font-weight-medium m-0">Business Logisics</h6>
-                </div>
-                <p>D2D also has capabilities for the transportation of vehicles (cars) and goods for businesses! </p>
-                <a class="text-dark border-bottom text-decoration-none" href="">Read More</a>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center mb-4 p-4" style="background-color: #3d7e70;">
-                    <i class="fa fa-2x fa-store text-dark pr-3"></i>
-                    <h6 class="text-white font-weight-medium m-0">Pick Up/Drop Off</h6>
+                    <h6 class="text-white font-weight-medium m-0" style="color:white">Pick Up/Drop Off</h6>
                 </div>
                 <p>Get the nearest pickup/dropoff boxes to get your shipments/courier done. </p>
-                <a class="text-dark border-bottom text-decoration-none" href="">Read More</a>
             </div>
 
         </div>
@@ -226,18 +181,17 @@
                 <div class="col-md-6 mb-5" style="padding-left: 150px;">
                     <h3 class=" mb-4" style="color:#3d7e70;">Quick Links</h3>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
-                        <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                        <a class="text-white mb-2" href="/home"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                        <a class="text-white mb-2" href="/about"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                        <a class="text-white mb-2" href="/services"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                        <a class="text-white" href="/contact"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-lg-5 col-md-6 mb-5">
             <h3 class="mb-4" style="color:#3d7e70;">Get In Touch</h3>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>#401, 32nd Street, New York, USA</p>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>#401, 32nd Street, Chicago, USA</p>
                     <p><i class="fa fa-phone-alt mr-2"></i>+1 773 823 6789</p>
                     <p><i class="fa fa-envelope mr-2"></i>info@d2d.com</p>
                     <div class="d-flex justify-content-start mt-4">

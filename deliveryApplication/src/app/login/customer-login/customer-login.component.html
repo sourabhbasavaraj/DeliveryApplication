@@ -40,33 +40,38 @@
 </section>
 
 <!-- Content for customer login starts from here -->
-<div style="margin-left:650px ; margin-right: 100px;">
-    <div style="margin-left: 90px;"><h2>Ship, manage, track, deliver</h2></div>
-    <br>
-    <table >
-        <tr>
-            <td>
+<div>
+  <div><h2 style="text-align: center;">Ship, manage, track, deliver</h2></div>
+ </div>
+ <div>
+    <table class="container" style="margin-top:30px ">
+        <tr class="row">
+            <td class = "col">
                 <a routerLink="/dropOffPackage" routerLinkActive="active" class="cardAnchorStyling" >
-                    <div class="card" style="width: 12rem;">
+                    <div class="card" >
                         <div class="card-body">
-                            <i class="fa-solid fa-truck fa-2xl" style="margin-left: 38px;"></i> <h5 class="card-title">RATE & SHIP</h5>
+                            <i class="fa-solid fa-truck fa-2xl d-flex justify-content-center" ></i>
+                            <br>
+                            <h5 class="card-title" style="text-align: center;">RATE & SHIP</h5>
                         </div>
                     </div>
                 </a>
             </td>
-            <td>
-                <div class="card" style="width: 10rem; height: 7rem; background-color: blueviolet; " >
-                    <div class="card-body" style="margin-top: 15px;margin-left: 35px;">
-                        <i class="fa-sharp fa-solid fa-box fa-2xl" style="margin-left: 16px;"></i>
-                        <h5 class="card-title">TRACK</h5>
+            <td class = "col">
+                <div class="card" style= "  background-color: blueviolet; " >
+                    <div class="card-body" >
+                        <i class="fa-sharp fa-solid fa-box fa-2xl  d-flex justify-content-center" ></i>
+                        <br>
+                        <h5 class="card-title" style="text-align: center;">TRACK</h5>
                     </div>
                   </div>
             </td>
-            <td>
-                <div class="card" style="width: 12rem;">
+            <td class = "col">
+                <div class="card" >
                     <div class="card-body">
-                        <i class="fa-solid fa-location-dot fa-2xl" style="margin-left: 41px;"></i>
-                        <h5 class="card-title">LOCATIONS</h5>
+                        <i class="fa-solid fa-location-dot fa-2xl  d-flex justify-content-center" ></i>
+                        <br>
+                        <h5 class="card-title" style="text-align: center;">LOCATIONS</h5>
                     </div>
                   </div>
             </td>
@@ -76,40 +81,49 @@
     <!-- Tracking Id Starting -->
 
     <br>
+    <br>
 
-                <div class="input-group" style="padding-right: 650px;">
-                    <input type="text" class="form-control border-light"  placeholder="Tracking Id" >
-
-                    <div class="input-group-append">
-                        <button class="btn btn-info px-4" style="margin-left: 15px;">Track & Trace</button>
+                <div class="container" >
+                  <div class="row">
+                    <div class="col d-flex justify-content-end">
+                      <input type="text" class="form-control"  style="width:250px; " placeholder="Tracking Id">
+                   </div>
+                    <div class="col d-flex justify-content-left">
+                      <button class="btn btn-info px-4" >Track & Trace</button>
                     </div>
+                  </div>
+
                 </div>
     <!-- Tracking ID stopped here -->
+</div>
 
 <br>
+
+
+
 <div>
 
     <br>
-        <table style="margin-right: 500px;">
-            <tr style="border: 1px dotted black;" >
-                <td>
-                    <img src="../../../assets/team-1.jpg" alt="">
+        <table class="container">
+            <tr class="row" style="border: 1px dotted black; " >
+                <td class="col">
+                    <img src="../../../assets/team-1.jpg" alt="" >
                 </td>
-                <td style="background-color: rgb(199, 196, 196);  text-align:center;">
-                    <div style="padding-left: 50px;padding-right:70px">
+                <td  class="col d-flex justify-content-center" style="background-color: rgb(199, 196, 196);  text-align:center; ">
+                    <div >
                             <h4>Keep holiday surprises secure</h4>
-                        <p style="text-align:justify;">Hide packages from little ones—and porch pirates. Redirect packages to a retail location for pickup. It’s just one of the benefits of D2D Delivery Manager®.</p>
+                        <p style="text-align:center;">Hide packages from little ones—and porch pirates. Redirect packages to a retail location for pickup. It’s just one of the benefits of D2D Delivery Manager®.</p>
                         <button class="btn btn-info" style="border-radius: 100x;"> SIGN UP FOR FREE</button>
                     </div>
                 </td>
             </tr>
             <br>
-            <tr style="border: 1px dotted black; " >
-                <td>
+            <tr class="row" style="border: 1px dotted black; " >
+                <td class="col ">
                     <img src="../../../assets/team-3.jpg" alt="">
                 </td>
-                <td style="background-color: rgb(255, 250, 250); text-align:center;">
-                <div style="padding-left: 50px;padding-right:70px">
+                <td class="col d-flex justify-content-center" style="background-color: rgb(255, 250, 250); text-align:center;">
+                <div >
                     <h4>Ship while you’re out and about</h4>
                     <p style="text-align:justify;">Create a shipping label on your phone with the D2D® Mobile app. Bring the QR code to one of thousands of locations nationwide. A team member will print a label for you.</p>
                     <button class="btn btn-info" style="border-radius: 100x;"> SHOPS NEAR ME</button>
@@ -117,12 +131,12 @@
                 </td>
             </tr>
             <br>
-             <tr style="border: 1px dotted black; " >
-                <td>
+             <tr class="row" style="border: 1px dotted black; " >
+                <td class="col">
                     <img src="../../../assets/team-2.jpg" alt="">
                 </td>
-                <td style="background-color: rgb(199, 196, 196); text-align:center; ">
-                <div style="padding-left: 50px;padding-right:70px">
+                <td class="col d-flex justify-content-center" style="background-color: rgb(199, 196, 196); text-align:center; ">
+                <div>
                     <h4>Seeing is believing this season</h4>
                     <p style="text-align:justify;">Be confident your package arrived with free picture proof of delivery. Use your tracking number to view exactly where we left your shipment.</p>
                     <button class="btn btn-info" style="border-radius: 100x;"> START NOW</button>
@@ -133,5 +147,4 @@
 
 
 </div>
-<!-- End of Content for customer login starts from here -->
-</div>
+

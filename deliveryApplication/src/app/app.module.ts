@@ -17,6 +17,14 @@ import { UpdatePickupComponent } from './delivery-partner/update-pickup/update-p
 import { RescheduleDeliveryComponent } from './delivery-partner/reschedule-delivery/reschedule-delivery.component';
 import { NotifyUserComponent } from './delivery-partner/notify-user/notify-user.component';
 import { DropOffPackageComponent } from './drop-off-package/drop-off-package.component';
+import { AdminComponent } from './admin/admin.component';
+import { CouponComponent } from './admin/coupon/coupon.component';
+import { WarehouseInfoComponent } from './admin/warehouse-info/warehouse-info.component';
+import { InventoryInfoComponent } from './admin/inventory-info/inventory-info.component';
+import { AboutComponent } from './about/about.component';
+import { ServicesComponent } from './services/services.component';
+import { PriceComponent } from './price/price.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +36,19 @@ import { DropOffPackageComponent } from './drop-off-package/drop-off-package.com
     CustomerLoginComponent,
     NearMeComponent,
     RateUsCompComponent,
-    DeliveryPartnerComponent,
-    DeliveryPartnerComponent,
     UpdateDeliveryComponent,
     UpdatePickupComponent,
     RescheduleDeliveryComponent,
-    NotifyUserComponent,
-    DropOffPackageComponent
+    NotifyUserComponent,DropOffPackageComponent,
+    AdminComponent,
+    CouponComponent,
+    WarehouseInfoComponent,
+    InventoryInfoComponent,
+    AboutComponent,
+    ServicesComponent,
+    PriceComponent,
+    ContactComponent,
+    DeliveryPartnerComponent
   ],
   imports: [
     BrowserModule,
