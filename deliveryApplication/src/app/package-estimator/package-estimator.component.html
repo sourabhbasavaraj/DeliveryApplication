@@ -1,4 +1,3 @@
-<p>package-estimator works!</p>
 <div class="shippingCalculator">
 <!-- Calculting the price for shippment -->
 <div class="getEstimation" >
@@ -15,20 +14,75 @@
                     <input class="form-control" type="text" placeholder="TO" >
                 </td>
             </tr>
-            <br>
-            <tr>
-                <td>
-                    <button type="submit"  class="btn btn-primary px-3" style="margin-left: 15px;"> Calculate the Price</button>
-                </td>
-            </tr>
         </table>
     </div>
 </div>
 <br>
+ <!-- Type of package to be shipped -->
+    <div>
+        <h4 style="text-align: center;">Tell us about your shipping. </h4>
+    </div>
+    <table style="margin-left: 150px;">
+        <tr>
+            <td>
+                <h6 style="text-align: center;" >Your Packaging</h6>
+            </td>
+        </tr>
+        <tr>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%; text-align:center;border:1px solid rgb(192, 192, 192)">D2D SMALL ENVELOPE</button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">D2D LARGE BOX</a>
+                <a class="dropdown-item" href="#">D2D BIG BOX</a>
+                </div>
+            </div>
+        </tr>
+    </table>
+
+<br>
+<div>
+    <table>
+        <tr>
+            <td>
+                <h6 style=" text-align: center;">No. of Packages</h6>
+            </td>
+            <td style="padding-left:10px; text-align: center;">
+                <h6>Weight Per Package</h6>
+            </td>
+            <td> 
+              <h6 style=" text-align: center;">Dimensions Per Packages</h6> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%; text-align:center;border:1px solid rgb(192, 192, 192)">1</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">2</a>
+                      <a class="dropdown-item" href="#">3</a>
+                    </div>
+                </div>                  
+            </td>
+            <td>
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Enter the Weight">
+            </td>
+            <td>
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Enter the dimensions in LxBxH">
+            </td>
+        </tr>
+    </table>
+  
+</div>
+
+
+<!-- End of the package to be shipped -->
+<br>
+<button type="submit"  class="btn btn-primary px-3" style="margin-left: 150px;"> Calculate the Price</button>
 <!-- End of calculating the shippment -->
 
 <!-- Description about why choose D2D -->
 <div>
+    <br>
     <div><h2>Why choose D2D?</h2></div>
     <div>
         <table>
