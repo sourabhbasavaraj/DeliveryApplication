@@ -1,8 +1,4 @@
-<!-- <div>
-    <h2>Welcome to D2D Shipping Services!</h2>
-</div> -->
 
-<!-- NavBar Starting for the customer login -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" routerLink="/home" routerLinkActive="active"><h1 class=""><i class="fa fa-truck mr-2"></i>D2D</h1></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="collapse navbar-collapse justify-content-between px-lg-3">
-          <a class="nav-link" href="#">Track Consignment</a>
+          <a class="nav-link" href="#">Home</a>
         </li>
         <li class="collapse navbar-collapse justify-content-between px-lg-3">
           <a class="nav-link" href="#">Modify Order</a>
@@ -245,18 +241,76 @@
         <!-- 7th Row End -->
         <button type="submit" class="btn btn-primary mb-2"  disabled="disabled">Continue</button>
     </table>
-    
-    
+
 </form>
 
-<!-- End of the collection of the address -->
+    <!-- End of the collection of the address -->
 
-<!-- Start of the payment part -->
+    <!-- Start of the payment part -->
 <br>
 
 <form action="" class="payment">
+     <!-- Type of package to be shipped -->
     <div>
-        <h4>2. Payment Details</h4>
+        <h4>2. Tell us about your shipping. </h4>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <h6 >Your Packaging</h6>
+            </td>
+        </tr>
+        <tr>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%; text-align:center;border:1px solid rgb(192, 192, 192)">D2D SMALL ENVELOPE</button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">D2D LARGE BOX</a>
+                  <a class="dropdown-item" href="#">D2D BIG BOX</a>
+                </div>
+            </div>
+        </tr>
+    </table>
+ 
+<br>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <h6 style=" text-align: center;">No. of Packages</h6>
+                </td>
+                <td style="padding-left:10px; text-align: center;">
+                    <h6>Weight Per Package</h6>
+                </td>
+                <td> 
+                  <h6 style=" text-align: center;">Dimensions Per Packages</h6> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%; text-align:center;border:1px solid rgb(192, 192, 192)">1</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">2</a>
+                          <a class="dropdown-item" href="#">3</a>
+                        </div>
+                    </div>                  
+                </td>
+                <td>
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Enter the Weight">
+                </td>
+                <td>
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Enter the dimensions in LxBxH">
+                </td>
+            </tr>
+        </table>
+      
+    </div>
+
+
+    <!-- End of the package to be shipped -->
+    <br>
+    <div>
+        <h4>3. Payment Details</h4>
     </div>
     <table class="mainPaymentTable">
         <tr>

@@ -1,3 +1,5 @@
+import { DeliveryPartnerLoginComponent } from './delivery-partner-login/delivery-partner-login.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { NotifyUserComponent } from './delivery-partner/notify-user/notify-user.component';
 import { RescheduleDeliveryComponent } from './delivery-partner/reschedule-delivery/reschedule-delivery.component';
 import { UpdatePickupComponent } from './delivery-partner/update-pickup/update-pickup.component';
@@ -44,7 +46,10 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'services', component: ServicesComponent},
   {path: 'price', component:PriceComponent},
-  {path: 'contact', component:ContactComponent}
+  {path: 'contact', component:ContactComponent},
+  {path: 'admin-login', component:AdminLoginComponent},
+  {path: 'dp-login', component:DeliveryPartnerLoginComponent},
+
 ];
 
 @NgModule({

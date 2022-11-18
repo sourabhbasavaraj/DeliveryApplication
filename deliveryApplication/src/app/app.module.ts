@@ -25,6 +25,8 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { PriceComponent } from './price/price.component';
 import { ContactComponent } from './contact/contact.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { DeliveryPartnerLoginComponent } from './delivery-partner-login/delivery-partner-login.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,10 @@ import { ContactComponent } from './contact/contact.component';
     ServicesComponent,
     PriceComponent,
     ContactComponent,
-    DeliveryPartnerComponent
+    DeliveryPartnerComponent,
+    DropOffPackageComponent,
+    AdminLoginComponent,
+    DeliveryPartnerLoginComponent
   ],
   imports: [
     BrowserModule,
