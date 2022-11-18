@@ -1,4 +1,37 @@
-<p>login works!</p>
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+      <a href="index.html" class="navbar-brand ml-lg-3">
+          <h1 class=""><i class="fa fa-truck mr-2"></i>D2D</h1>
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+          <div class="navbar-nav m-auto py-0">
+              <a href="index.html" class="nav-item nav-link ">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="service.html" class="nav-item nav-link">Services</a>
+              <a href="price.html" class="nav-item nav-link">Price</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn-primary py-2 px-4 d-none d-lg-block" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;">
+              Login
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/login">Customers</a>
+              <a class="dropdown-item" href="#">Admin/Wearhouse Manager</a>
+              <a class="dropdown-item" href="#">Delivery Partner</a>
+            </div>
+          </div>
+          <a routerLink="/register" routerLinkActive="active" class=" btn-primary py-2 px-4" style="margin-left: 50px; text-decoration: none;" >Sign-up</a>
+      </div>
+  </nav>
+</div>
+<!-- Navbar End -->
+
+
 <div class='container justify-content-center'>
   <div class='login'>
     <h2> Enter your User ID and password to login</h2>
@@ -6,19 +39,21 @@
   <div class="form-signin w-100 auto">
     <form >
       <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+        <input type="email" class="form-control" id="floatingInput" placeholder="  " required>
         <label for="floatingInput">Email address</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+        <input type="password" class="form-control" id="floatingPassword" placeholder="  " required>
         <label for="floatingPassword">Password</label>
       </div>
-      <div class="checkbox mb-3">
-          <label>
-            <input type="button" value="Forgot-Password">
-          </label>
+      <div class="form-floating">
+
+        <input type="button" class="forgotPassword" value="Forgot-Password">
+
       </div>
       <!-- Radio buttons for Cutomer or Business indviduals -->
+
+     <div class = "form-floating">
       <div class="form-check">
         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
         <label class="form-check-label" for="exampleRadios1">
@@ -31,17 +66,35 @@
           Business Customers
         </label>
       </div>
+    </div>
 
       <!-- End of radio buttons -->
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <!-- <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button> -->
 
 
     </form>
 
+    <buttona routerLink="/customerLogin" routerLinkActive="active" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</buttona>
   </div>
 
 
 </div>
 
-<button> <a routerLink="/customerLogin" routerLinkActive="active">Dummy to check customer login</a></button>
+<!-- <button> <a routerLink="/customerLogin" routerLinkActive="active">Dummy to check customer login</a></button> -->
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>

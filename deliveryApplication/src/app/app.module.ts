@@ -11,6 +11,11 @@ import { CustomerLoginComponent } from './login/customer-login/customer-login.co
 import { NearMeComponent } from './near-me/near-me.component';
 import {GoogleMapsModule} from '@angular/google-maps';
 import { RateUsCompComponent } from './rate-us-comp/rate-us-comp.component';
+import { DeliveryPartnerComponent } from './delivery-partner/delivery-partner.component';
+import { UpdateDeliveryComponent } from './delivery-partner/update-delivery/update-delivery.component';
+import { UpdatePickupComponent } from './delivery-partner/update-pickup/update-pickup.component';
+import { RescheduleDeliveryComponent } from './delivery-partner/reschedule-delivery/reschedule-delivery.component';
+import { NotifyUserComponent } from './delivery-partner/notify-user/notify-user.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,13 @@ import { RateUsCompComponent } from './rate-us-comp/rate-us-comp.component';
     PackageEstimatorComponent,
     CustomerLoginComponent,
     NearMeComponent,
-    RateUsCompComponent
+    RateUsCompComponent,
+    DeliveryPartnerComponent,
+    DeliveryPartnerComponent,
+    UpdateDeliveryComponent,
+    UpdatePickupComponent,
+    RescheduleDeliveryComponent,
+    NotifyUserComponent
   ],
   imports: [
     BrowserModule,

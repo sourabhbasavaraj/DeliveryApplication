@@ -1,5 +1,36 @@
 <!-- <p>home works!</p> -->
 <!-- Navbar Start-->
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+      <a href="index.html" class="navbar-brand ml-lg-3">
+          <h1 class=""><i class="fa fa-truck mr-2"></i>D2D</h1>
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+          <div class="navbar-nav m-auto py-0">
+              <a href="index.html" class="nav-item nav-link ">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="service.html" class="nav-item nav-link">Services</a>
+              <a href="price.html" class="nav-item nav-link">Price</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn-primary py-2 px-4 d-none d-lg-block" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;">
+              Login
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/login">Customers</a>
+              <a class="dropdown-item" href="#">Admin/Wearhouse Manager</a>
+              <a class="dropdown-item" href="#">Delivery Partner</a>
+            </div>
+          </div>
+          <a routerLink="/register" routerLinkActive="active" class=" btn-primary py-2 px-4" style="margin-left: 50px; text-decoration: none;" >Sign-up</a>
+      </div>
+  </nav>
+</div>
 
 
 
@@ -65,7 +96,7 @@
             <h1 class="mb-4">Best Logistic Services</h1>
         </div>
         <a  routerLink="/getEstimate" routerLinkActive="active" ></a>
-            <div class="row pb-3">
+          <div class="row pb-3">
                 <div class="col-lg-3 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4 p-4" style="background-color: #3d7e70;">
                         <i class="fa fa-2x fa-plane text-dark pr-3"></i>
@@ -74,8 +105,8 @@
                     <p>Get a approximate value according to the weight and the distance the parcel has to be delivered.</p>
                     <a class="text-dark border-bottom text-decoration-none" href="">Read More</a>
                 </div>
-        
-            <div class="col-lg-3 col-md-6 text-center mb-5">
+
+              <div class="col-lg-3 col-md-6 text-center mb-5">
                 <div class="d-flex align-items-center justify-content-center mb-4 p-4" style="background-color: #3d7e70;">
                     <i class="fa fa-2x fa-truck text-dark pr-3"></i>
                     <h6 class="text-white font-weight-medium m-0"><a  routerLink="/nearMe" routerLinkActive="active" >Wearhouse near me!</a></h6>
@@ -99,7 +130,7 @@
                 <p>Get the nearest pickup/dropoff boxes to get your shipments/courier done. </p>
                 <a class="text-dark border-bottom text-decoration-none" href="">Read More</a>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -226,3 +257,19 @@
 <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
