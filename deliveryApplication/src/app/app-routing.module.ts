@@ -12,6 +12,7 @@ import { PackageEstimatorComponent } from './package-estimator/package-estimator
 import { CustomerLoginComponent } from './login/customer-login/customer-login.component';
 import { NearMeComponent } from './near-me/near-me.component';
 import { RateUsCompComponent } from './rate-us-comp/rate-us-comp.component';
+import { DropOffPackageComponent } from './drop-off-package/drop-off-package.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent},
@@ -26,8 +27,8 @@ const routes: Routes = [
   { path:'agent/update-delivery', component: UpdateDeliveryComponent},
   { path:'agent/pickup', component: UpdatePickupComponent},
   { path:'agent/reschedule', component: RescheduleDeliveryComponent},
-  { path:'agent/notify', component: NotifyUserComponent}
-
+  { path:'agent/notify', component: NotifyUserComponent},
+  { path:'dropOffPackage', component:DropOffPackageComponent}
 ];
 
 @NgModule({

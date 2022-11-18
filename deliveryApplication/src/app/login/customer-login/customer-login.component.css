@@ -1,24 +1,16 @@
 .form-inline{
-   max-width: 800px;
+   /* max-width: 800px; */
    margin: auto;
    font-family: Poppins;
-   
 }
 
 .payment{
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: auto;
     font-family: Poppins;
 }
 
-.mainAddressTable{
-    margin-left:70px ;
-    
-}
 
-.mainPaymentTable{
-    margin-left:70px ;
-}
 
 
 .deliveryImage {
@@ -27,15 +19,42 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%; 
-    width: 100%;
+    /* height: 100%; 
+    width: 100%; */
     font-size: 120px;
-    text-align: center;
+    
     font-weight: bold;
     text-transform: uppercase;
-    font-family: 'Steelfish Rg', 'helvetica neue',
-             helvetica, arial, sans-serif;
     font-weight: 800;
     -webkit-font-smoothing: antialiased;
-    padding:200px 200px 200px 200px;
+    height:400px;
+    opacity: 0.8;
+
+}
+
+.card-body{
+    margin-left: 28px;
+}
+
+.cardAnchorStyling{
+   color: black;
+    text-decoration: none;
+}
+    
+
+.cardAnchorStyling:hover {
+    color: orangered; 
+    background-color: blueviolet; 
+    text-decoration:dotted; 
+    cursor:pointer;  
+   
+}
+
+.btn{
+    border-radius: 15px;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
 }

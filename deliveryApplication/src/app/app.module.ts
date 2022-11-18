@@ -16,6 +16,7 @@ import { UpdateDeliveryComponent } from './delivery-partner/update-delivery/upda
 import { UpdatePickupComponent } from './delivery-partner/update-pickup/update-pickup.component';
 import { RescheduleDeliveryComponent } from './delivery-partner/reschedule-delivery/reschedule-delivery.component';
 import { NotifyUserComponent } from './delivery-partner/notify-user/notify-user.component';
+import { DropOffPackageComponent } from './drop-off-package/drop-off-package.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NotifyUserComponent } from './delivery-partner/notify-user/notify-user.
     UpdateDeliveryComponent,
     UpdatePickupComponent,
     RescheduleDeliveryComponent,
-    NotifyUserComponent
+    NotifyUserComponent,
+    DropOffPackageComponent
   ],
   imports: [
     BrowserModule,

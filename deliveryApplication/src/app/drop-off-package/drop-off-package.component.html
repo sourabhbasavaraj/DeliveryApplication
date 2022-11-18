@@ -1,0 +1,310 @@
+<!-- <div>
+    <h2>Welcome to D2D Shipping Services!</h2>
+</div> -->
+
+<!-- NavBar Starting for the customer login -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/home" routerLinkActive="active"><h1 class=""><i class="fa fa-truck mr-2"></i>D2D</h1></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+          <a class="nav-link" href="#">Track Consignment</a>
+        </li>
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+          <a class="nav-link" href="#">Modify Order</a>
+        </li>
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+            <a class="nav-link" href="#">Shipping Information</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Account Details</a>
+        </li>
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+            <a class="nav-link" routerLink="/rateUs" routerLinkActive="active">Rate Us</a>
+          </li>
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">    
+        </li>
+        <li>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- Navbar ending for the customer login page -->   
+
+<!-- Start of the address and payment part -->
+<br>
+
+<div class="wholeContent">
+<form class="form-inline" action="payment">
+    <div><h3> 1. Address Information for the shipment</h3></div>
+    <div><h4> <span> &emsp;</span> Enter your (FROM) address and the recipient's (TO) address</h4></div>
+    <table class="mainAddressTable">
+        <tr>
+            <td>
+                <h6>From Address</h6>
+                <div>
+                    <h6>Senders Name</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="">
+                </div>
+            </td>
+            <td>
+                <h6>To Address</h6>
+                <div>
+                    <h6>Recipient Name</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="">
+                </div>
+            </td>
+        </tr>
+
+        <!-- 2nd Row for Country -->
+
+        <tr>
+            <td>
+                <h6>Country</h6>
+                <div class="form-group mb-2">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          United States
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Canada</a>
+                          <a class="dropdown-item" href="#">Mexico</a>
+                          <a class="dropdown-item" href="#">India</a>
+                        </div>
+                      </div>
+                </div>
+            </td>
+            <td>
+                <h6>Country</h6>
+                <div class="form-group mb-2">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          United States
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Canada</a>
+                          <a class="dropdown-item" href="#">Mexico</a>
+                          <a class="dropdown-item" href="#">India</a>
+                        </div>
+                      </div>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Country End -->
+        <!-- 3rd Row for address -->
+
+        <tr>
+            <td>
+                <div>
+                    <h6>Address</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Street Address">
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h6>Address</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Street Address">
+                </div>
+            </td>
+            
+        </tr>
+
+        <!-- 3rd Row address end -->
+
+        <!-- 4th row start zip code -->
+        <tr>
+            <td>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Apt, Floor, Suite, etc.">
+                </div>
+            <td>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Apt, Floor, Suite, etc.">
+                </div>
+            </td>
+        </tr>
+
+        <!-- 4th row end -->
+
+        <!-- 5th Row start -->
+        <tr>
+            <td>
+                <div>
+                    <h6>ZIP</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Street Address">
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h6>ZIP</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Street Address">
+                </div>
+            </td>
+        </tr>
+    
+        <!-- 5th Row End -->
+
+        <!-- 6th row start -->
+        <tr>
+            <td>
+                <div>
+                    <h6>City</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Street Address">
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h6>City</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Street Address">
+                </div>
+            </td>
+        </tr>
+        
+        <!-- 6th Row End -->
+
+        <!-- State starting -->
+        
+        <tr>
+            <td>
+                <h6>State</h6>
+                <div class="form-group mb-2">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Select
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Illinois</a>
+                          <a class="dropdown-item" href="#">New York</a>
+                          <a class="dropdown-item" href="#">Michigan</a>
+                        </div>
+                      </div>
+                </div>
+            </td>
+            <td>
+                <h6>State</h6>
+                <div class="form-group mb-2">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Illinois</a>
+                          <a class="dropdown-item" href="#">New York</a>
+                          <a class="dropdown-item" href="#">Michigan</a>
+                        </div>
+                      </div>
+                </div>
+            </td>
+        </tr>
+        
+        
+        <!-- State Ending -->
+
+        <!-- 7th row start -->
+        <tr>
+            <td>
+                <div>
+                    <h6>Phone</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Street Address">
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h6>Phone</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Street Address">
+                </div>
+            </td>
+        </tr>
+        
+        <!-- 7th Row End -->
+        <button type="submit" class="btn btn-primary mb-2"  disabled="disabled">Continue</button>
+    </table>
+    
+    
+</form>
+
+<!-- End of the collection of the address -->
+
+<!-- Start of the payment part -->
+<br>
+
+<form action="" class="payment">
+    <div>
+        <h4>2. Payment Details</h4>
+    </div>
+    <table class="mainPaymentTable">
+        <tr>
+                <td>
+                    <div>
+                        <h6>Card Details</h6>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">  
+                        <input type="text" class="form-control" id="inputPassword2" placeholder="Card Number" required>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <h6>Name on the card</h6>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">  
+                        <input type="text" class="form-control" id="inputPassword2" required>
+                    </div>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <h6>Card Number</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Card Number" required>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h6>CVV</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">  
+                    <input type="password" class="form-control" id="inputPassword2" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="" id=""> <label for="">Save the card details</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="btn btn-primary mb-2" disabled="disabled">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
