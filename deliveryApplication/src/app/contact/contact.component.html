@@ -1,3 +1,34 @@
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class=""><i class="fa fa-truck mr-2"></i>D2D</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="/home" class="nav-item nav-link ">Home</a>
+                <a href="/about" class="nav-item nav-link">About</a>
+                <a href="/services" class="nav-item nav-link">Services</a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
+            </div>
+  
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn-primary py-2 px-4 d-none d-lg-block" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;">
+                Login
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/login">Customers</a>
+                <a class="dropdown-item" routerLink="/admin-login">Admin/Wearhouse Manager</a>
+                <a class="dropdown-item" href="/dp-login">Delivery Partner</a>
+              </div>
+            </div>
+            <a routerLink="/register" routerLinkActive="active" class=" btn-primary py-2 px-4" style="margin-left: 50px; text-decoration: none;" >Sign-up</a>
+        </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->
 <!-- Header Start -->
 <div class="jumbotron jumbotron-fluid mb-5">
     <div class="container text-center py-5">
@@ -18,11 +49,11 @@
         <div class="row">
             <div class="col-lg-5 pb-4 pb-lg-0">
                 <div class="bg-primary text-dark text-center p-4">
-                    <h4 class="m-0"><i class="fa fa-map-marker-alt text-white mr-2"></i>123 Street, New York, USA</h4>
+                    <h4 class="m-0"><i class="fa fa-map-marker-alt text-white mr-2"></i>401, Chicago, USA</h4>
                 </div>
-                <iframe style="width: 120%; height: 1000px;"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190255.8460334488!2d-87.73196395!3d41.83373295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1668828750976!5m2!1sen!2sus"
+                    frameborder="0" style="border:0; height: 87%; width: 100%;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                </iframe>
             </div>
             <div class="col-lg-7">
                 <h6 class="text-primary text-uppercase font-weight-bold">Contact Us</h6>

@@ -27,6 +27,7 @@ import { PriceComponent } from './price/price.component';
 import { ContactComponent } from './contact/contact.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { DeliveryPartnerLoginComponent } from './delivery-partner-login/delivery-partner-login.component';
+import { TrackingDataComponent } from './tracking-data/tracking-data.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { DeliveryPartnerLoginComponent } from './delivery-partner-login/delivery
     DeliveryPartnerComponent,
     DropOffPackageComponent,
     AdminLoginComponent,
-    DeliveryPartnerLoginComponent
+    DeliveryPartnerLoginComponent,
+    TrackingDataComponent
   ],
   imports: [
     BrowserModule,

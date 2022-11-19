@@ -1,3 +1,35 @@
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class=""><i class="fa fa-truck mr-2"></i>D2D</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="/home" class="nav-item nav-link ">Home</a>
+                <a href="/about" class="nav-item nav-link">About</a>
+                <a href="/services" class="nav-item nav-link">Services</a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
+            </div>
+  
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn-primary py-2 px-4 d-none d-lg-block" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;">
+                Login
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/login">Customers</a>
+                <a class="dropdown-item" routerLink="/admin-login">Admin/Wearhouse Manager</a>
+                <a class="dropdown-item" href="/dp-login">Delivery Partner</a>
+              </div>
+            </div>
+            <a routerLink="/register" routerLinkActive="active" class=" btn-primary py-2 px-4" style="margin-left: 50px; text-decoration: none;" >Sign-up</a>
+        </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->
+
 <div class="rateUsContent">
     <img class="bgImg" alt="">
     <form method="post" action="//submit.form" onSubmit="return validateForm();" class="rateUsForm">
@@ -41,10 +73,45 @@
             <span><input type="radio" id="data_9_2" name="data_9" value="I am not sure"/> I am not sure</span><br/>
         </div>
         
-        <div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit" class="btn btn-primary mb-2"></div>
+        <div><input name="skip_Submit" value="Submit" type="submit" class="btn btn-primary mb-2"></div>
         
     </form>
 </div>
+
+ <!-- Footer Start -->
+ <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="row pt-5">
+        <div class="col-lg-7 col-md-6">
+            <div class="row">
+                <div class="col-md-6 mb-5" style="padding-left: 150px;">
+                    <h3 class=" mb-4" style="color:#3d7e70;">Quick Links</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
+                        <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-6 mb-5">
+            <h3 class="mb-4" style="color:#3d7e70;">Get In Touch</h3>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>#401, 32nd Street, New York, USA</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+1 773 823 6789</p>
+                    <p><i class="fa fa-envelope mr-2"></i>info@kgf.com</p>
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+        </div>
+    </div>
+  </div>
+  
+  <!-- Footer End -->
+  
 <script type="text/javascript">
     function validateForm() {
     if (isEmpty(document.getElementById('data_2').value.trim())) {

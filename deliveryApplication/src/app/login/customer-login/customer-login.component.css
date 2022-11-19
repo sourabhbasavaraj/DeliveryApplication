@@ -1,7 +1,3 @@
-
-
-
-
 .deliveryImage {
     background-image: url("../../../assets/Delivery.jpg");
     background-repeat: repeat;
@@ -22,7 +18,6 @@
 }
 
 .footer{
-  
   bottom:0;
   left:0;
 }
