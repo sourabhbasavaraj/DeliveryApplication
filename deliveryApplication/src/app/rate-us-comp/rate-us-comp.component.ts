@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CustomersRatingService } from 'app/customers-rating.service';
 
@@ -8,18 +9,14 @@ import { CustomersRatingService } from 'app/customers-rating.service';
 })
 export class RateUsCompComponent implements OnInit {
 
-  constructor(private service: CustomersRatingService) { }
+  constructor(private customerService: CustomersRatingService) { }
 
   ngOnInit(): void {
-    this.getDataFromAPI();
   }
 
-
-  getDataFromAPI(){
-    this.service.getData().subscribe((res: any)=>{
-      console.log(res);
-    }, (err)=>{
-      console.log(err)
-    })
+  sendUserData(products: {reviewerName: String, orderId: Number, rating:Number, title: String, suggestions: String, review: String}){
+    console.log(products);
+    this.customerService.onProductCreate(products);
   }
+  
 }

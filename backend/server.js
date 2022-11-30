@@ -36,7 +36,6 @@ const monModel = mongoose.model("userReviews", schema);
 //POST ROUTE
 app.post("/post",async(req,res)=>{
     console.log("Inside Post");
-
     const data = new monModel({
         id: req.body.id ,
         reviewerName:req.body.reviewerName ,

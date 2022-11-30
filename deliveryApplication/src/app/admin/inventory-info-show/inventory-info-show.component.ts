@@ -13,15 +13,15 @@ export class InventoryInfoShowComponent implements OnInit {
     this.insideorder('inside')
     this.deliveredorder('delivered')
 
-    const data = [
-      { year: 2010, count: 10 },
-      { year: 2011, count: 20 },
-      { year: 2012, count: 15 },
-      { year: 2013, count: 25 },
-      { year: 2014, count: 22 },
-      { year: 2015, count: 30 },
-      { year: 2016, count: 28 }
-    ];
+    // const data = [
+    //   { year: 2010, count: 10 },
+    //   { year: 2011, count: 20 },
+    //   { year: 2012, count: 15 },
+    //   { year: 2013, count: 25 },
+    //   { year: 2014, count: 22 },
+    //   { year: 2015, count: 30 },
+    //   { year: 2016, count: 28 }
+    // ];
 
     this.graphlist()
     console.log(this.graphdata)
@@ -52,7 +52,7 @@ export class InventoryInfoShowComponent implements OnInit {
       {orderid:'648', status:'delivered'},
       {orderid:'211', status:'inside'},
       {orderid:'865', status:'inside'},
-      {orderid:'655', status:'delivered'},
+      {orderid:'655', status:'inside'},
       {orderid:'468', status:'delivered'},
       {orderid:'218', status:'inside'}
     ]
