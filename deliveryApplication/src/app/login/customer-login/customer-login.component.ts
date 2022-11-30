@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'app/services/auth.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-customer-login',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor( private authService:AuthService, private router :Router) { }
 
   ngOnInit(): void {
+
+    console.log("authid" + this.authService.id);
+    if (this.authService.id == '') {
+        console.log("login failed");
+        this.router.navigate(["login"]);
+    }
+  }
+  public logout(){
+    this.authService.id = '';
+
+
+    console.log("clicked logout button");
+    this.router.navigate(["home"]);
+
   }
 
 }

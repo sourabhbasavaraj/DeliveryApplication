@@ -1,5 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,12 +25,14 @@ import { CouponComponent } from './admin/coupon/coupon.component';
 import { WarehouseInfoComponent } from './admin/warehouse-info/warehouse-info.component';
 import { InventoryInfoComponent } from './admin/inventory-info/inventory-info.component';
 import { AboutComponent } from './about/about.component';
-import { ServicesComponent } from './services/services.component';
 import { PriceComponent } from './price/price.component';
 import { ContactComponent } from './contact/contact.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { DeliveryPartnerLoginComponent } from './delivery-partner-login/delivery-partner-login.component';
 import { TrackingDataComponent } from './tracking-data/tracking-data.component';
+import { ModifyOrderComponent } from './login/modify-order/modify-order.component';
+import { ViewOrderComponent } from './login/view-order/view-order.component';
+import { AccountDetailsComponent } from './login/account-details/account-details.component';
 
 @NgModule({
   declarations: [
@@ -48,18 +53,23 @@ import { TrackingDataComponent } from './tracking-data/tracking-data.component';
     WarehouseInfoComponent,
     InventoryInfoComponent,
     AboutComponent,
-    ServicesComponent,
     PriceComponent,
     ContactComponent,
     DeliveryPartnerComponent,
     DropOffPackageComponent,
     AdminLoginComponent,
     DeliveryPartnerLoginComponent,
-    TrackingDataComponent
+    TrackingDataComponent,
+    ModifyOrderComponent,
+    ViewOrderComponent,
+    AccountDetailsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

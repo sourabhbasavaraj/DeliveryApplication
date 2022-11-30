@@ -10,13 +10,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="collapse navbar-collapse justify-content-between px-lg-3">
-          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+          <a class="nav-link" routerLink="/customerLogin" routerLinkActive="active">Home</a>
         </li>
         <li class="collapse navbar-collapse justify-content-between px-lg-3">
-          <a class="nav-link" href="#">Modify Order</a>
+          <a class="nav-link"  routerLink="/modifyOrder" routerLinkActive="active">Modify Order</a>
         </li>
         <li class="collapse navbar-collapse justify-content-between px-lg-3">
-            <a class="nav-link" href="#">Shipping Information</a>
+            <a class="nav-link"  routerLink="/viewOrder" routerLinkActive="active">View Order</a>
           </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/dropOffPackage" routerLinkActive="active">DropOff Package</a>
@@ -24,12 +24,10 @@
         <li class="collapse navbar-collapse justify-content-between px-lg-3">
             <a class="nav-link" routerLink="/rateUs" routerLinkActive="active">Rate Us</a>
           </li>
-        <!-- <li class="collapse navbar-collapse justify-content-between px-lg-3">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        </li>
+
         <li>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </li> -->
+            <button class="btn btn-outline-success collapse navbar-collapse  justify-content-between px-lg-3" (click)="logout()" >Logout</button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -159,7 +157,7 @@
   <div class="row pt-5">
       <div class="col-lg-7 col-md-6">
           <div class="row">
-              
+
               <div class="col-md-6 mb-5" style="padding-left: 150px;">
                   <h3 class=" mb-4" style="color:#3d7e70;">Quick Links</h3>
                   <div class="d-flex flex-column justify-content-start">

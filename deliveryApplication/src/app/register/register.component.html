@@ -35,24 +35,24 @@
     <h2> User Registration</h2>
   </div>
   <div class="form-signin w-100 auto">
-    <form >
-      <div class="form-floating">
-        <input type="text" class="form-control" id="floatingName" placeholder="UserName" required>
+    <form #userForm="ngForm" (ngSubmit) ="onSubmit(userForm)"  novalidate>
+      <div class="form-floating" >
+        <input type="text" class="form-control" id="floatingName" placeholder="UserName" name="name" [(ngModel)]="model.name" required>
         <label for="floatingName">User Name</label>
       </div>
       <br>
       <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"  name="email" [(ngModel)]="model.email" required>
         <label for="floatingInput">Email address</label>
       </div>
       <br>
       <div class="form-floating">
-        <input type="number" class="form-control" id="floatingMobile" placeholder="Mobile Number" required>
+        <input type="text" class="form-control" id="floatingMobile" placeholder="Mobile Number" name="mobile" [(ngModel)]="model.mobile" required>
         <label for="floatingMobile">Mobile Number</label>
       </div>
       <br>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"  name="password" [(ngModel)]="model.password" required>
         <label for="floatingPassword">Password</label>
       </div>
       <br>
@@ -61,10 +61,10 @@
         <label for="floatingRePassword">Re-Type Password</label>
       </div>
       <br>
-        <!-- <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button> -->
+        <button class="w-100 btn btn-lg btn-primary"  type="submit">Sign Up</button>
 
     </form>
-    <button class="w-100 btn btn-lg btn-primary" routerLink="/customerLogin">Sign Up</button>
+    <!-- <button class="w-100 btn btn-lg btn-primary" routerLink="/customerLogin">Sign Up</button> -->
   </div>
 
 
