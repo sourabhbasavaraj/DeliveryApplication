@@ -1,0 +1,36 @@
+.container {
+    align-content: center;
+    margin-left: 420px;
+}
+
+.btn-primary{
+    background-color: black;
+    color: white;
+}
+
+table{
+    border: 1px solid;
+    width: 50%;
+    /* border-collapse: collapse; */
+}
+
+table tr td{
+    border: 1px solid;
+}
+
+td{
+    padding: 20px;
+}
+
+th{
+    padding: 20px;
+    border: 1px solid;
+}
+
+.divChart{
+    display: block;
+    width: 700px;
+    height: 700px;
+    padding-top: 30px;
+
+}

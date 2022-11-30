@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomersRatingService } from 'app/customers-rating.service';
 
 @Component({
   selector: 'app-rate-us-comp',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RateUsCompComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: CustomersRatingService) { }
 
   ngOnInit(): void {
+    this.getDataFromAPI();
   }
 
+
+  getDataFromAPI(){
+    this.service.getData().subscribe((res: any)=>{
+      console.log(res);
+    }, (err)=>{
+      console.log(err)
+    })
+  }
 }

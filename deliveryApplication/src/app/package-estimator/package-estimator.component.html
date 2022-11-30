@@ -37,18 +37,40 @@
 <div class="getEstimation" >
     <div style="margin-left: 10px;"><h2>Calculate the shipping rates!</h2></div>
     <div>
-        <table style="margin-left: 120px;">
+       
+        <table >
             <tr >
                 <td>
-                    <input class="form-control" type="text" placeholder="FROM">
+                    <input class="form-control" type="text" name="address" id="" placeholder="FROM ADDRESS">
+                  
+                </td>
+                <td>
+                    <input class="form-control" type="text" placeholder="FROM ZIPCODE" name="zipcode1" [(ngModel)]="zipcode1">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input class="form-control" type="text" placeholder="TO" >
+                    <input class="form-control" type="text" name="address" id="" placeholder="FROM ADDRESS">
+                   
+                </td>
+                <td>
+                    <input class="form-control" type="text" placeholder="TO ZIPCODE"  name="zipcode2" [(ngModel)]="zipcode2">
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <!-- <input type="text" name="distanceOut" id="distanceCalculated"> -->
+                    <h4>
+                        <span onclick="document.getElementById('rateText').innerHTML='The distance between each address in kms is: '">The distance between each address in kms is: </span> {{output}}
+                       
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td> <button (click)="getMethod()" class="btn btn-primary px-3" id="rateText"> Get Estimation</button></td>
+            </tr>
         </table>
+
     </div>
 </div>
 <br>
@@ -149,3 +171,77 @@
 </div>
 <!-- End of Description -->
 </div>
+
+
+<script type="text/javascript">//<![CDATA[
+	window.addEventListener('DOMContentLoaded', function() {
+		// IMPORTANT: Fill in your client key
+		var clientKey = "mq3VokRDA0Lz9y3ONqvfnwOk9oFiJs8jKF4eMffiy1X44pqyGUSXtVHsGy5LUMLP   ";
+
+		var cache = {};
+		var container = $("#example2");
+		var errorElem = container.find(".label-error");
+
+		/** Handle successful response */
+		function handleResp(data)
+		{
+			// Check for error
+			if (data.error_msg)
+				errorElem.text(data.error_msg);
+			else if ("distance" in data)
+			{
+				// Show div
+				container.find("div.distance").show()
+				// Set distance
+				.find("span.distance").text(data.distance + " miles");
+			}
+		}
+
+		// Set up event handlers
+		container.find("input[name='zipcode1'],input[name='zipcode2']").on("keyup change", function() {
+			// Get zip code
+			var zipcode1 = $("input[name='zipcode1']").val().substring(0, 5);
+			var zipcode2 = $("input[name='zipcode2']").val().substring(0, 5);
+			if (zipcode1.length == 5 && /^[0-9]+$/.test(zipcode1) && zipcode2.length == 5 && /^[0-9]+$/.test(zipcode2))
+			{
+				// Clear error
+				errorElem.empty();
+
+				// Check cache
+				var cacheKey = zipcode1 + '-' + zipcode2;
+				if (cacheKey in cache)
+				{
+					handleResp(cache[cacheKey]);
+				}
+				else
+				{
+					// Build url
+					var url = "https://www.zipcodeapi.com/rest/"+clientKey+"/distance.json/" + zipcode1 + "/" + zipcode2 + "/mile";
+
+					// Make AJAX request
+					$.ajax({
+						"url": url,
+						"dataType": "json"
+					}).done(function(data) {
+						handleResp(data);
+
+						// Store in cache
+						cache[cacheKey] = data;
+					}).fail(function(data) {
+						if (data.responseText && (json = $.parseJSON(data.responseText)))
+						{
+							// Store in cache
+							cache[cacheKey] = json;
+
+							// Check for error
+							if (json.error_msg)
+								errorElem.text(json.error_msg);
+						}
+						else
+							errorElem.text('Request failed.');
+					});
+				}
+			}
+		}).trigger("change");
+	});
+//]]></script>

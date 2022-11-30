@@ -24,6 +24,7 @@ import { ServicesComponent } from './services/services.component';
 import { PriceComponent } from './price/price.component';
 import { ContactComponent } from './contact/contact.component';
 import { TrackingDataComponent } from './tracking-data/tracking-data.component';
+import { InventoryInfoShowComponent } from './admin/inventory-info-show/inventory-info-show.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent},
@@ -51,6 +52,7 @@ const routes: Routes = [
   {path: 'admin-login', component:AdminLoginComponent},
   {path: 'dp-login', component:DeliveryPartnerLoginComponent},
   {path: 'tracking', component:TrackingDataComponent},
+  {path: 'inventoryShow', component:InventoryInfoShowComponent}
 
 ];
 

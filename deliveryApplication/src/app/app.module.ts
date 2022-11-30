@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// import { AgmCoreModule } from '@agm/core';
+import { HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +32,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { DeliveryPartnerLoginComponent } from './delivery-partner-login/delivery-partner-login.component';
 import { TrackingDataComponent } from './tracking-data/tracking-data.component';
+import { InventoryInfoShowComponent } from './admin/inventory-info-show/inventory-info-show.component';
 
 @NgModule({
   declarations: [
@@ -55,11 +60,19 @@ import { TrackingDataComponent } from './tracking-data/tracking-data.component';
     DropOffPackageComponent,
     AdminLoginComponent,
     DeliveryPartnerLoginComponent,
-    TrackingDataComponent
+    TrackingDataComponent,
+    InventoryInfoShowComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+    
+    // AgmCoreModule.forRoot({
+    //   apiKey: ''
+    // })
   ],
   providers: [],
   bootstrap: [AppComponent]
