@@ -32,6 +32,28 @@ exports.viewModify = async (req, res, next)=> {
 
 };
 
+exports.getPickupData = async (req, res, next)=> {
+
+  const o_id = req.params.o_id;
+
+  console.log(o_id);
+  console.log("now calling");
+
+  try{
+    
+    const [details_order] =  await OrderDetails.getPickupData(o_id);
+
+    
+    res.status(200).json(details_order);
+  }
+  catch (err){
+    if(!err.statusCode) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
+
+};
 
 exports.placeOrder = async (req, res, next)=> {
 
@@ -93,6 +115,124 @@ exports.placeOrder = async (req, res, next)=> {
     console.log(pDate);
     console.log(dDate);
 
+   //result = await OrderDetails.placeOrderStatus(order.o_id, uId, o_status, pDate,dDate,sp);
+   console.log(result);
+
+    res.status(200).json({ o_id });
+  } catch (err) {
+    if (!err.statusCode) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
+};
+
+
+exports.orderDelivered = async (req, res, next)=> {
+
+
+  console.log("inside order pick update controller");
+
+  console.log(req.body);
+
+  const o_id = req.body.oid;
+  const status = req.body.status;
+  
+  console.log(o_id,status);
+
+  try {
+    
+   
+    const result = await OrderDetails.orderDeliveryUpdation(o_id, status);
+  
+   //result = await OrderDetails.placeOrderStatus(order.o_id, uId, o_status, pDate,dDate,sp);
+   console.log(result);
+
+    res.status(200).json({ o_id });
+  } catch (err) {
+    if (!err.statusCode) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
+};
+
+
+exports.orderReschedule = async (req, res, next)=> {
+
+
+  console.log("inside order pick update controller");
+
+  console.log(req.body);
+
+  const o_id = req.body.oid;
+  const dDate = req.body.dDate;
+  
+  console.log(o_id,dDate);
+
+  try {
+    
+   
+    const result = await OrderDetails.updateReschedule(o_id, dDate);
+  
+   //result = await OrderDetails.placeOrderStatus(order.o_id, uId, o_status, pDate,dDate,sp);
+   console.log(result);
+
+    res.status(200).json({ o_id });
+  } catch (err) {
+    if (!err.statusCode) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
+};
+
+exports.orderPicked = async (req, res, next)=> {
+
+
+  console.log("inside order pick update controller");
+
+  console.log(req.body);
+
+  const o_id = req.body.oid;
+  const status = req.body.status;
+  
+  console.log(o_id,status);
+
+  try {
+    
+   
+    const result = await OrderDetails.orderPickUpdation(o_id, status);
+  
+   //result = await OrderDetails.placeOrderStatus(order.o_id, uId, o_status, pDate,dDate,sp);
+   console.log(result);
+
+    res.status(200).json({ o_id });
+  } catch (err) {
+    if (!err.statusCode) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
+};
+
+exports.modifyOrder = async (req, res, next)=> {
+
+
+  console.log("inside place order controller");
+
+  console.log(req.body);
+
+  const o_id = req.body.o_id;
+  const pDate = req.body.pDate;
+  
+  console.log(o_id,pDate);
+
+  try {
+    
+   
+    const result = await OrderDetails.modifyOrder(o_id, pDate);
+  
    //result = await OrderDetails.placeOrderStatus(order.o_id, uId, o_status, pDate,dDate,sp);
    console.log(result);
 

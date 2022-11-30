@@ -25,11 +25,36 @@ module.exports = class OrderDetails{
     return db.execute('SELECT * FROM orderStatus WHERE o_id = ?', [o_id]);
   }
 
+  static getPickupData(o_id){
 
+    console.log("inside getPickupDatain the model ",o_id);
+    return db.execute('SELECT * FROM orderdetails WHERE o_id = ?', [o_id]);
+  }
+
+  static updateReschedule(o_id,dDate)
+  {
+    return db.execute('UPDATE  orderStatus SET dDate = ? WHERE o_id = ?', [dDate,o_id]);
+ 
+  }
   static viewDetails(o_id){
 
     console.log("inside viewDetails in the model ",o_id);
     return db.execute('SELECT * FROM orderdetails WHERE o_id = ?', [o_id]);
+  }
+
+  static modifyOrder(o_id,pDate){
+
+    return db.execute('UPDATE  orderStatus SET pDate = ? WHERE o_id = ?', [pDate,o_id]);
+ 
+  }
+ static orderDeliveryUpdation(o_id, status){
+  return db.execute('UPDATE  orderStatus SET orderStatus = ? WHERE o_id = ?', [status,o_id]);
+ 
+ }
+
+  static orderPickUpdation(o_id,status){
+    return db.execute('UPDATE  orderStatus SET orderStatus = ? WHERE o_id = ?', [status,o_id]);
+ 
   }
 
   static placeOrder(order,uId, o_status, pDate, dDate,slpk){

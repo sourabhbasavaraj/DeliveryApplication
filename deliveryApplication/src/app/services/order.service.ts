@@ -20,7 +20,10 @@ export class orderModify{
   public sp!:string;
  }
 
-
+export class modifyPDate{
+  public o_id!: string;
+  public pDate!: string;
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -40,6 +43,54 @@ export class OrderService {
     private errorHandlerService: ErrorHandlerService,
     private router: Router) { }
 
+    orderDelivered(oid:string, status:string): Observable<orderModify> {
+      console.log("inside Order Delivered");
+
+      return this.http
+        .post<orderModify>(`${this.url}/orderDelivered`, {oid,status}, this.httpOptions)
+        .pipe(
+          first(),
+          catchError(this.errorHandlerService.handleError<orderModify>("orderPicked"))
+        );
+    }
+
+    orderReschedule(oid:string, dDate:string): Observable<orderModify> {
+      console.log("inside ORder reschedule");
+
+      return this.http
+        .post<orderModify>(`${this.url}/orderReschedule`, {oid,dDate}, this.httpOptions)
+        .pipe(
+          first(),
+          catchError(this.errorHandlerService.handleError<orderModify>("orderPicked"))
+        );
+    }
+
+    orderPicked(oid:string, status:string): Observable<orderModify> {
+      console.log("inside Place Order");
+
+      return this.http
+        .post<orderModify>(`${this.url}/orderPicked`, {oid,status}, this.httpOptions)
+        .pipe(
+          first(),
+          catchError(this.errorHandlerService.handleError<orderModify>("orderPicked"))
+        );
+    }
+
+    modifyOrder(oid:string, p_Date:string): Observable<orderModify> {
+      console.log("inside Place Order");
+      var mod = new modifyPDate();
+
+      mod.o_id = oid;
+      mod.pDate = p_Date;
+      return this.http
+        .post<orderModify>(`${this.url}/modifyOrder`, mod, this.httpOptions)
+        .pipe(
+          first(),
+          catchError(this.errorHandlerService.handleError<orderModify>("modifyOrder"))
+        );
+    }
+
+
     placeOrder(order:  Order): Observable<Order> {
       console.log("inside Place Order");
       return this.http
@@ -56,8 +107,17 @@ export class OrderService {
         .get<orderModify[]>(`${this.url}/viewModify/${oid}` ,{ responseType: "json" })
         .pipe(
           catchError(this.errorHandlerService.handleError<orderModify[]>("fetchAll",[]))
-        );;
+        );
 
+    }
+
+    getPickupData(oid:string):Observable<Order[]>{
+      console.log("inside get PickupData");
+      return this.http
+        .get<Order[]>(`${this.url}/getPickup/${oid}` ,{ responseType: "json" })
+        .pipe(
+          catchError(this.errorHandlerService.handleError<Order[]>("getPickupData",[]))
+        );
     }
 
 }

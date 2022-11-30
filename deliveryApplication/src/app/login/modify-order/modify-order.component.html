@@ -55,9 +55,16 @@
       <h4> Order ID: {{oid}} </h4>
       <h4> Order Status: {{o_status}}</h4>
 
-      <h4> Order Picup Date: {{pDate}}</h4>
+      <h4> Order Pickup Date: {{pDate}}</h4>
+      <br>
+      <br>
       <div *ngIf="notPick">
         <form #modiyForm="ngForm" (ngSubmit) ="submitModify(modiyForm)"  novalidate>
+
+          <h4>To modify Pick Up Date</h4>
+          <br>
+          <h4> Enter the Pick Up Date</h4>
+          <br>
           <div class="form-floating" >
             <input type="text" class="form-control" id="floatingName" placeholder="dd/mm/yyyy" name="o_id" [(ngModel)]="dDate" required>
             <label for="floatingName">dd/mm/yyyy</label>
@@ -65,7 +72,7 @@
           <br>
 
           <br>
-            <button class="w-100 btn btn-lg btn-primary"  type="submit">Show Details</button>
+            <button class="w-100 btn btn-lg btn-primary"  type="submit">Update</button>
 
         </form>
       </div>

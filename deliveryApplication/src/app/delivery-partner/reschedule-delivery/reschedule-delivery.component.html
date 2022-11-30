@@ -31,22 +31,28 @@
       <img src="../../../assets/reschedule.jpg" style="width:400px;height:500px">
     </div>
     <div class="col">
-      <form>
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Tracking ID" required>
-          <label for="floatingInput">Tracking ID</label>
-        </div>
-        <div class="form-floating">
-          <input type="date" class="form-control" id="floatingInput" required>
+      <div *ngIf="!success">
+        <form #res="ngForm" >
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Tracking ID" name="oid" [(ngModel)]="oid" required>
+            <label for="floatingInput">Tracking ID</label>
+          </div>
+          <div class="form-floating">
+            <input type="date" class="form-control" id="floatingInput" name="date" [(ngModel)]="date"  required>
 
-        </div>
-        <div class="form-floating">
+          </div>
+          <div class="form-floating">
 
-          <!-- <button  class="w-100 btn btn-lg btn-primary" type="submit"> Delivered</button> -->
+            <button  class="w-100 btn btn-lg btn-primary" (click)="updateReschedule()"> Update Reschedule</button>
 
-        </div>
-      </form>
-      <button routerLink="/customerLogin" routerLinkActive="active" class="w-100 btn btn-lg btn-primary" type="submit"> Update Reschedule</button>
+          </div>
+        </form>
+      </div>
+      <div *ngIf="success">
+        <br><br><br><br>
+        <h5>Delivery Date is Updated</h5>
+      </div>
+
     </div>
   </div>
 </div>

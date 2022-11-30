@@ -31,22 +31,27 @@
       <img src="../../../assets/deliveryAgent.jpg">
     </div>
     <div class="col">
-      <form>
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Tracking ID" required>
-          <label for="floatingInput">Tracking ID</label>
-        </div>
-        <div class="form-floating">
-          <input type="textarea" class="form-control" id="floatingInput" placeholder="Signature" required>
-          <label for="floatingInput">Signature</label>
-        </div>
-        <div class="form-floating">
+      <div *ngIf="!success">
+        <form>
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Tracking ID" name="oid" [(ngModel)]="oid" required>
+            <label for="floatingInput">Tracking ID</label>
+          </div>
+          <div class="form-floating">
+            <input type="textarea" class="form-control" id="floatingInput" placeholder="Signature" required>
+            <label for="floatingInput">Signature</label>
+          </div>
+          <div class="form-floating">
 
-          <!-- <button  class="w-100 btn btn-lg btn-primary" type="submit"> Delivered</button> -->
+            <button  class="w-100 btn btn-lg btn-primary" type="submit" (click)="updateDelivery()"> Delivered</button>
 
-        </div>
-      </form>
-      <button routerLink="/customerLogin" routerLinkActive="active" class="w-100 btn btn-lg btn-primary" type="submit"> Delivered</button>
+          </div>
+        </form>
+      </div>
+      <div *ngIf="success">
+        <br><br><br><br>
+        <h4> Order has been delivered successfully!!</h4>
+      </div>
     </div>
   </div>
 </div>

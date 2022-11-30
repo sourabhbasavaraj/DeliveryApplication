@@ -24,7 +24,7 @@ export class ModifyOrderComponent implements OnInit {
 
   orderModify!: Observable<orderModify>;
 
-  oid!:string;
+  oid !:string;
   u_id ='';
   pDate ='';
   o_status ='';
@@ -39,10 +39,20 @@ export class ModifyOrderComponent implements OnInit {
     this.u_id = this.auth.id
   }
 
+
+
   submitModify(modiyForm:any){
     console.log("inside the modifed");
     console.log(this.dDate);
+    this.orderService.modifyOrder(this.oid,this.dDate).subscribe((msg) => {
+      console.log(msg);});
+
+
   }
+
+
+
+
   onSubmit(form:any){
     console.log("fetching the order");
 
@@ -58,6 +68,7 @@ export class ModifyOrderComponent implements OnInit {
       console.log("inside",this.o_status);
 
       if(this.o_status == '0'){
+        this.o_status = 'Order Placed';
         this.notPick = true;
       }
       else {
