@@ -8,6 +8,10 @@ API KEY FOR ZIPCODE: 'GIsH1D01hVbneLhoF0vA6J0lEnevrbQJ4189eLIu4ffiUys06EwKd4cSlG
 
 In order to run our application, we first need to unzip the folder 'DeliveryApplication'.
 
+===========================================
+Instructions to deploy and run the project
+===========================================
+
 --------
 DATABASE
 --------
