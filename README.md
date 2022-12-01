@@ -56,7 +56,7 @@ To run the frontend of our application, follow the below mentioned steps:
 
 -> Navigate to the frontend folder and open the command line prompt for the current directory. 
 
--> Once you are at the current directory, type the command "npm install". This command will install all the necessary dependencies present from the package.json file and required nodemodules to run our server.js file. 
+-> Once you are at the current directory, type the command "npm install". This command will install all the necessary dependencies present from the package.json file and required nodemodules to run the frontend. 
 
 -> To start the development server, run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
