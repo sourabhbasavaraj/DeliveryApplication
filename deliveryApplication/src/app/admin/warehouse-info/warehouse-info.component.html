@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" routerLink="/home" routerLinkActive="active"><h1 class=""><i class="fa fa-truck mr-2"></i>D2D</h1></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -33,20 +33,17 @@
     <div class="container">
       <h4>Select warehouse</h4>
       <select class="drop">
-          <option value="item1">item1</option>
-          <option value="item2">item2</option>
-          <option value="item3">item3</option>
-          <option value="item4">item4</option>
-          <option value="item5">item5</option>
-          <option value="item6">item6</option>
+          <option value="item1">D2D Lake Shore Warehouse</option>
+          <option value="item2">D2D Bridgeport Warehouse</option>
+          <option value="item3">D2D Fuller Park Warehouse</option>
       </select>
       <br>
       <br>
-      <h4>Enter Address</h4>
-      <input type="text" class="drop">
+      <h4>Enter Address to be updated</h4>
+      <textarea type="text" class="drop"></textarea>
       <br>
       <br>
-      <button class=" btn-primary py-2 px-4 d-none d-lg-block">Update</button>
+      <button class=" btn-primary py-2 px-4 d-none d-lg-block" onclick="showAlert()">Update</button>
     </div>
 </div>
 

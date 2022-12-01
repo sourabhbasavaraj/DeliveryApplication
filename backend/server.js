@@ -1,5 +1,25 @@
 const express = require("express");
 const app = express();
+var mysql = require('mysql');
+
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+    "host" : "localhost",
+    "user" : "sourabh",
+    "password" : "root",
+    "database": "deliveryApplication"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
+
+
+
+
 
 const mongoose = require ("mongoose");
 app.use(express.json());
@@ -71,7 +91,52 @@ app.get('/fetch',function(req,res){
     })
 })
 
+//MYSQL FETCHING WAREHOUSE 1
+app.get('/warehouse1',(req,res)=>{
+    // fetchid = req.params.id;
+    console.log("Warehouse")
 
+        con.query("SELECT * FROM warehouse1", function (err, result) {
+          if (err) 
+          {
+            throw err;
+          }
+          else {
+            console.log(res);
+            res.send(result);
+          }
+        
+        });
+})
+
+app.get('/warehouse2',(req,res)=>{
+    // fetchid = req.params.id;
+    console.log("Warehouse")
+
+        con.query("SELECT * FROM warehouse2", function (err, result) {
+          if (err) throw err;
+          return(result);
+        });
+})
+
+app.get('/warehouse3',function(req,res){
+    // fetchid = req.params.id;
+    console.log("Warehouse")
+
+        con.query("SELECT * FROM warehouse3", function (err, result) {
+          if (err) throw err;
+          return(result);
+        });
+})
+
+app.post('/warehouseInfoAddress', function(req,res){
+    console.log("Warehouse info address")
+
+    con.query('UPDATE warehousedetails SET wname =?, wAddress =? WHERE w_id = ?', [req.wname, req.wAddress, req.w_id], function (err, result) {
+      if (err) throw err;
+      console.log(result);
+    });
+})
 
 //Listening
 app.listen(3000, ()=>{

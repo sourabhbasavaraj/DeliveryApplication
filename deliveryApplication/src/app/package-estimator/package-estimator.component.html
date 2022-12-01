@@ -57,18 +57,17 @@
                     <input class="form-control" type="text" placeholder="TO ZIPCODE"  name="zipcode2" [(ngModel)]="zipcode2">
                 </td>
             </tr>
-            <tr>
-                <td>
+            <!-- <tr>
+                <td> -->
                     <!-- <input type="text" name="distanceOut" id="distanceCalculated"> -->
-                    <h4>
+                    <!-- <h4>
                         <span onclick="document.getElementById('rateText').innerHTML='The distance between each address in kms is: '">The distance between each address in kms is: </span> {{output}}
-                       
                     </h4>
                 </td>
             </tr>
             <tr>
                 <td> <button (click)="getMethod()" class="btn btn-primary px-3" id="rateText"> Get Estimation</button></td>
-            </tr>
+            </tr> -->
         </table>
 
     </div>
@@ -132,8 +131,10 @@
 
 
 <!-- End of the package to be shipped -->
-<br>
-<button type="submit"  class="btn btn-primary px-3" style="margin-left: 150px;"> Calculate the Price</button>
+<h4>
+    <span onclick="document.getElementById('finalPrice').toggleAttribute">The total cost would be:{{totalValue}} </span> 
+</h4>
+<button (click)="getMethod()" class="btn btn-primary px-6" id="finalPrice"> Calculate the Price</button>
 <!-- End of calculating the shippment -->
 
 <!-- Description about why choose D2D -->
@@ -173,75 +174,36 @@
 </div>
 
 
-<script type="text/javascript">//<![CDATA[
-	window.addEventListener('DOMContentLoaded', function() {
-		// IMPORTANT: Fill in your client key
-		var clientKey = "mq3VokRDA0Lz9y3ONqvfnwOk9oFiJs8jKF4eMffiy1X44pqyGUSXtVHsGy5LUMLP   ";
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="row pt-5">
+        <div class="col-lg-7 col-md-6">
+            <div class="row">
 
-		var cache = {};
-		var container = $("#example2");
-		var errorElem = container.find(".label-error");
+                <div class="col-md-6 mb-5" style="padding-left: 150px;">
+                    <h3 class=" mb-4" style="color:#3d7e70;">Quick Links</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white mb-2" href="/home"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                        <a class="text-white mb-2" href="/about"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                        <a class="text-white mb-2" href="/services"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                        <a class="text-white" href="/contact"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-6 mb-5">
+            <h3 class="mb-4" style="color:#3d7e70;">Get In Touch</h3>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>#401, 32nd Street, Chicago, USA</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+1 773 823 6789</p>
+                    <p><i class="fa fa-envelope mr-2"></i>info@d2d.com</p>
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+        </div>
+    </div>
+</div>
 
-		/** Handle successful response */
-		function handleResp(data)
-		{
-			// Check for error
-			if (data.error_msg)
-				errorElem.text(data.error_msg);
-			else if ("distance" in data)
-			{
-				// Show div
-				container.find("div.distance").show()
-				// Set distance
-				.find("span.distance").text(data.distance + " miles");
-			}
-		}
-
-		// Set up event handlers
-		container.find("input[name='zipcode1'],input[name='zipcode2']").on("keyup change", function() {
-			// Get zip code
-			var zipcode1 = $("input[name='zipcode1']").val().substring(0, 5);
-			var zipcode2 = $("input[name='zipcode2']").val().substring(0, 5);
-			if (zipcode1.length == 5 && /^[0-9]+$/.test(zipcode1) && zipcode2.length == 5 && /^[0-9]+$/.test(zipcode2))
-			{
-				// Clear error
-				errorElem.empty();
-
-				// Check cache
-				var cacheKey = zipcode1 + '-' + zipcode2;
-				if (cacheKey in cache)
-				{
-					handleResp(cache[cacheKey]);
-				}
-				else
-				{
-					// Build url
-					var url = "https://www.zipcodeapi.com/rest/"+clientKey+"/distance.json/" + zipcode1 + "/" + zipcode2 + "/mile";
-
-					// Make AJAX request
-					$.ajax({
-						"url": url,
-						"dataType": "json"
-					}).done(function(data) {
-						handleResp(data);
-
-						// Store in cache
-						cache[cacheKey] = data;
-					}).fail(function(data) {
-						if (data.responseText && (json = $.parseJSON(data.responseText)))
-						{
-							// Store in cache
-							cache[cacheKey] = json;
-
-							// Check for error
-							if (json.error_msg)
-								errorElem.text(json.error_msg);
-						}
-						else
-							errorElem.text('Request failed.');
-					});
-				}
-			}
-		}).trigger("change");
-	});
-//]]></script>
+<!-- Footer End -->

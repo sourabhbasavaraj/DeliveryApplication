@@ -12,4 +12,5 @@ export class WarehouseInfoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomersRatingService } from 'app/customers-rating.service';
 
 @Component({
   selector: 'app-inventory-info',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InventoryInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: CustomersRatingService) { }
 
   ngOnInit(): void {
+    this.getWarehouseData();
   }
+
+  getWarehouseData(){
+    this.service.getWarehouse1Data().subscribe((res: any)=>{
+      console.log(res);
+    })
+  };
+
 
 }

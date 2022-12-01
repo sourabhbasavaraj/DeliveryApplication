@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" routerLink="/home" routerLinkActive="active"><h1 class=""><i class="fa fa-truck mr-2"></i>D2D</h1></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,27 +24,24 @@
     </ul>
   </div>
 </nav>
+
 <div class="container-fluid p-0">
 
     <br>
     <br>
-    <div class="container">
-    <h4>Select Inventory</h4>
-    <select class="drop">
-        <option value="item1">item1</option>
-        <option value="item2">item2</option>
-        <option value="item3">item3</option>
-        <option value="item4">item4</option>
-        <option value="item5">item5</option>
-        <option value="item6">item6</option>
-    </select>
-    <br>
-    <br>
-    <br>
-
-    <button class=" btn-primary py-2 px-4 d-none d-lg-block" routerLink="/inventoryShow">Show</button>
-</div>
+        <div class="container">
+        <h4>Select Warehouse to see the parcels</h4>
+        <select class="drop">
+            <option value="1">D2D Lake Shore Wearhouse</option>
+            <option value="2">D2D Bridgeport Wearhouse</option>
+            <option value="3">D2D Fuller Park Wearhouse</option>
+        </select>
+        <br>
+        <br>
+        <button class=" btn-primary py-2 px-4 d-none d-lg-block" routerLink="/inventoryShow">Show</button>
+        </div>
   </div>
+  
 
 
 

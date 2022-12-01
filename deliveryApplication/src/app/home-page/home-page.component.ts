@@ -74,17 +74,6 @@ export class HomePageComponent implements OnInit {
       console.log(err)
     })
   }
-  reviewName(reviewName: any) {
-    throw new Error('Method not implemented.');
-  }
-  review(review: any) {
-    throw new Error('Method not implemented.');
-  }
-  reviewSuggestions(reviewSuggestions: any) {
-    throw new Error('Method not implemented.');
-  }
-  reviewTitle(reviewTitle: any) {
-    throw new Error('Method not implemented.');
-  }
+
 
 }

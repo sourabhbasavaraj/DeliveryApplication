@@ -30,9 +30,9 @@
   </div>
   <!-- Navbar End -->
 
-<div class="rateUsContent">
+  <!-- RateUsContentStarting -->
+  <div class="rateUsContent">
     <img class="bgImg" alt="">
-
     <form class="rateUsForm" #productsForm="ngForm" (ngSubmit)="sendUserData(productsForm.value)">
         <div style="max-width: 400px;"></div>
 
@@ -56,11 +56,11 @@
         </div>
 
         <div style="padding-bottom: 18px;">Suggestions/Area of Improvement<br/>
-            <input id="suggestions"  name="suggestions" style="max-width : 450px;" rows="3" class="form-control" ngModel required>
+            <textarea id="name" false  name="suggestions" style="max-width : 450px;" rows="3" class="form-control" ngModel required></textarea>
         </div>
         
         <div style="padding-bottom: 18px;">Review<span style="color: red;"> *</span><br/>
-            <input id="review" false name="review" style="max-width : 450px;" rows="9" class="form-control" ngModel required>
+            <textarea id="review" name="review" style="max-width : 450px;" rows="9" class="form-control" ngModel required></textarea>
         </div>
 
         <div style="padding-bottom: 18px;">Would you recommend our services?<br/>
@@ -73,6 +73,7 @@
         
     </form>
 </div>
+  <!-- RateUsContentEnding -->
 
  <!-- Footer Start -->
  <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
@@ -107,3 +108,33 @@
   </div>
   
   <!-- Footer End -->
+
+    <!-- <form class="rateUsForm" #productsForm="ngForm" (ngSubmit)="sendUserData(productsForm.value)">
+        <div style="max-width: 400px;"></div>
+
+        <div style="padding-bottom: 18px;font-size : 24px;">Product Review</div> -->
+
+        <!-- <div style="padding-bottom: 18px;">Reviewer Name<span style="color: red;"> *</span><br/>
+            <input type="text" id="reviewerName" name="reviewerName" style="max-width : 450px;" class="form-control" ngModel required>
+        </div>
+
+        <div style="padding-bottom: 18px;">Order ID<span style="color: red;"> *</span><br/>
+            <input type="number" id="orderId" name="orderId" style="max-width : 450px;" class="form-control" ngModel required>
+        </div>
+
+        
+        <div style="padding-bottom: 18px;">Rate Our Services<span style="color: red;"> *</span><br/>
+            <input type="number" id="rating" name="rating" min="1" max="5" style="max-width : 450px;" class="form-control" ngModel required >
+        </div>
+
+        <div style="padding-bottom: 18px;">Title<span style="color: red;"> *</span><br/>
+            <input type="text" id="title" name="title" style="max-width : 450px;" class="form-control" ngModel required>
+        </div>
+
+        <div style="padding-bottom: 18px;">Suggestions/Area of Improvement<br/>
+            <input id="suggestions"  name="suggestions" style="max-width : 450px;" rows="3" class="form-control" ngModel required>
+        </div>
+        
+        <div style="padding-bottom: 18px;">Review<span style="color: red;"> *</span><br/>
+            <input id="review" false name="review" style="max-width : 450px;" rows="9" class="form-control" ngModel required>
+        </div> -->
