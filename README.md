@@ -73,3 +73,15 @@ ASSIGNMENT FEATURES IMPLEMENTED
 -> We are maintaining a session for each of the user in order to track any multiple orders. We are making use of "JWT TOKENS" here.
 
 -> We are displaying our inventory at the frontend by making using of a bar graph. Here we have made use of the chart.js package. 
+
+-> Login and Signup for the customers have been implemented. The data is getting stored in the MySQL database. The password is encrypted, shh! 
+
+-> Customers can give reviews and rate our services about their experience. The reviews are getting stored in the MongoDB. We have also displayed few of the reviews on our home page. 
+
+-> The user can enter their orderId and can we see the status of their package. 
+
+-> Different portals have been created with different access rights. Admin portal, cutsomers portal and a delivery personeel portal. 
+
+--------------------
+TOTAL LINES OF CODE: 
+--------------------
