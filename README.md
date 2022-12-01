@@ -82,6 +82,6 @@ ASSIGNMENT FEATURES IMPLEMENTED
 
 -> Different portals have been created with different access rights. Admin portal, cutsomers portal and a delivery personeel portal. 
 
---------------------
-TOTAL LINES OF CODE: 
---------------------
+-----------------------------------------------------
+TOTAL LINES OF CODE: APPROXIMATELY 7000 LINES OF CODE
+-----------------------------------------------------
