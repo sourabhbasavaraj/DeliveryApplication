@@ -61,3 +61,15 @@ To run the frontend of our application, follow the below mentioned steps:
 -> To start the development server, run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 -> Angular is running on the port 4200 of our local system. If the port is being used by any other rapplication, it will ask for the confirmation of change in port once the ng serve command is run. Type "Y" and a port will auto assigned to host the application. 
+
+-------------------------------
+ASSIGNMENT FEATURES IMPLEMENTED
+-------------------------------
+
+-> NEAR ME feature has been implemented. We have implemented the near me feature by the use of GeoLocation API and the leaflet maps. 
+
+-> For calculation of distance between the two points we have made use of the 'ZIP API'. Reference:- https://docs.us.zip.co/docs/custom-integration-guide
+
+-> We are maintaining a session for each of the user in order to track any multiple orders. We are making use of "JWT TOKENS" here.
+
+-> We are displaying our inventory at the frontend by making using of a bar graph. Here we have made use of the chart.js package. 
