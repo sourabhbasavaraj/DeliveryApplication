@@ -33,6 +33,9 @@ import { TrackingDataComponent } from './tracking-data/tracking-data.component';
 import { ModifyOrderComponent } from './login/modify-order/modify-order.component';
 import { ViewOrderComponent } from './login/view-order/view-order.component';
 import { AccountDetailsComponent } from './login/account-details/account-details.component';
+import { WearhouseComponent } from './wearhouse/wearhouse.component';
+import { InventoryInfoShowComponent } from './inventory-info-show/inventory-info-show.component';
+import { ServiceComponent } from './service/service.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +66,9 @@ import { AccountDetailsComponent } from './login/account-details/account-details
     ModifyOrderComponent,
     ViewOrderComponent,
     AccountDetailsComponent,
+    WearhouseComponent,
+    InventoryInfoShowComponent,
+    ServiceComponent,
   ],
   imports: [
     BrowserModule,

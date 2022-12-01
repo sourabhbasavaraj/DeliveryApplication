@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarehouseInfoComponent implements OnInit {
 
+
+  status =''
+  wearhouse =''
+  oid = ''
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  onSubmit(form :any){
+    
+  }
 }

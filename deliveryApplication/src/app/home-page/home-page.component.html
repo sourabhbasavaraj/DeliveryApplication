@@ -41,7 +41,7 @@
         <div class="mx-auto" style="width: 100%; max-width: 600px;">
             <div class="input-group">
                 <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Tracking Id">
-                
+
                 <div class="input-group-append">
                    <button class="btn btn-primary px-3"><a routerLink="/tracking" routerLinkActive="active">Track & Trace</a></button>
                 </div>
@@ -116,6 +116,11 @@
 <!-- Features End -->
 
 <!-- Testimonial Start -->
+
+<pre>
+    {{stringifiedData}}
+</pre>
+
 <div class="container-fluid py-5">
     <div class="container">
         <div class="text-center pb-2">
@@ -128,44 +133,47 @@
                 <div class="d-flex align-items-center mb-3">
                     <img class="img-fluid rounded-circle" src="../../assets/testimonial-1.jpg" style="width: 60px; height: 60px;" alt="">
                     <div class="ml-3">
-                        <h6 class="font-weight-semi-bold m-0">Manav Singh</h6>
+                        <h6 class="font-weight-semi-bold m-0">{{reviewName1}}</h6>
                         <small>Vice President - Hexaware</small>
                     </div>
                 </div>
-                <p class="m-0">I wanted to let you know that we are really glad we reached out to you guys to help with getting products in from Germany. Your team has done a phenomenal job for us, starting from the moment I reached out to you.</p>
+                <p class="m-0">{{review4}}</p>
             </div>
+            <br>
             <div class="position-relative bg-secondary p-4">
                 <i class="fa fa-3x fa-quote-right text-dark position-absolute" style="top: -6px; right: 0;"></i>
                 <div class="d-flex align-items-center mb-3">
                     <img class="img-fluid rounded-circle" src="../../assets/testimonial-2.jpg" style="width: 60px; height: 60px;" alt="">
                     <div class="ml-3">
-                        <h6 class="font-weight-semi-bold m-0">Rishabh Lakotia</h6>
+                        <h6 class="font-weight-semi-bold m-0">{{reviewName2}}</h6>
                         <small> Manager, Hyundai </small>
                     </div>
                 </div>
-                <p class="m-0">When every other forwarder in the world gave up, D2D showed up to perform. We’ve almost managed to clear our China ocean FCL backlog working through them. </p>
+                <p class="m-0">{{review3}} </p>
             </div>
+            <br>
             <div class="position-relative bg-secondary p-4">
                 <i class="fa fa-3x fa-quote-right text-dark position-absolute" style="top: -6px; right: 0;"></i>
                 <div class="d-flex align-items-center mb-3">
                     <img class="img-fluid rounded-circle" src="../../assets/testimonial-3.jpg" style="width: 60px; height: 60px;" alt="">
                     <div class="ml-3">
-                        <h6 class="font-weight-semi-bold m-0">Sam Bling</h6>
+                        <h6 class="font-weight-semi-bold m-0">{{reviewName4}}</h6>
                         <small>Hyundai, Head of Transportaion.</small>
                     </div>
                 </div>
-                <p class="m-0">I am so thankful that we found Logistics Plus. We typically don’t have a need for shipping and logistics companies – so the first three that we have worked with left us feeling that we should just expect subpar customer service in this industry. </p>
+                <p class="m-0">{{review2}} </p>
             </div>
+            <br>
             <div class="position-relative bg-secondary p-4">
                 <i class="fa fa-3x fa-quote-right text-dark position-absolute" style="top: -6px; right: 0;"></i>
                 <div class="d-flex align-items-center mb-3">
                     <img class="img-fluid rounded-circle" src="../../assets/testimonial-4.jpg" style="width: 60px; height: 60px;" alt="">
                     <div class="ml-3">
-                        <h6 class="font-weight-semi-bold m-0">John Wick</h6>
+                        <h6 class="font-weight-semi-bold m-0">{{reviewName3}}</h6>
                         <small>DHL, President</small>
                     </div>
                 </div>
-                <p class="m-0">I just wanted to take a moment of your time to thank you for the spectacular service you provide. I am a Traffic Manager for the Corporate office at (an IL-based industrial manufacturer). I get to deal with lots of 3PLs every day, and of course, both of you (Ashish & Nagashree).</p>
+                <p class="m-0">{{review1}}</p>
             </div>
         </div>
     </div>

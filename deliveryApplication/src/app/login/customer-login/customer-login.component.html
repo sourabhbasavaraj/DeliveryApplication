@@ -90,10 +90,10 @@
                 <div class="container" >
                   <div class="row">
                     <div class="col d-flex justify-content-end">
-                      <input type="text" class="form-control"  style="width:250px; " placeholder="Tracking Id">
+                      <input type="text" class="form-control"  style="width:250px; " placeholder="Tracking Id"  [(ngModel)]="trackId" >
                    </div>
                     <div class="col d-flex justify-content-left">
-                      <button class="btn btn-info px-4" ><a routerLink="/tracking" routerLinkActive="active">Track & Trace</a> </button>
+                      <button class="btn btn-info px-4" (click)="toTracking()">Track & Trace</button>
                     </div>
                   </div>
 

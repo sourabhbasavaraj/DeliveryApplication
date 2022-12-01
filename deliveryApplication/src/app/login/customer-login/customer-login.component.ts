@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'app/services/auth.service';
 import { Router } from "@angular/router";
+import { TrackingdataService } from 'app/services/trackingdata.service';
 
 @Component({
   selector: 'app-customer-login',
@@ -9,7 +10,12 @@ import { Router } from "@angular/router";
 })
 export class CustomerLoginComponent implements OnInit {
 
-  constructor( private authService:AuthService, private router :Router) { }
+
+  trackId ='';
+  constructor( private authService:AuthService, private router :Router, private track:TrackingdataService) { }
+
+
+
 
   ngOnInit(): void {
 
@@ -26,6 +32,12 @@ export class CustomerLoginComponent implements OnInit {
     console.log("clicked logout button");
     this.router.navigate(["home"]);
 
+  }
+
+
+  toTracking() {
+   this.track.o_id= this.trackId;
+    this.router.navigate(["tracking"]);
   }
 
 }

@@ -111,12 +111,91 @@ export class OrderService {
 
     }
 
+    viewOrder(u_id:  string): Observable<orderModify[]> {
+      console.log("inside Place Order");
+      return this.http
+        .get<orderModify[]>(`${this.url}/viewOrder/${u_id}` ,{ responseType: "json" })
+        .pipe(
+          catchError(this.errorHandlerService.handleError<orderModify[]>("fetchAll",[]))
+        );
+
+    }
+
     getPickupData(oid:string):Observable<Order[]>{
       console.log("inside get PickupData");
       return this.http
         .get<Order[]>(`${this.url}/getPickup/${oid}` ,{ responseType: "json" })
         .pipe(
           catchError(this.errorHandlerService.handleError<Order[]>("getPickupData",[]))
+        );
+    }
+
+
+
+
+    insertWearHouse1(oid:string, status:string): Observable<orderModify> {
+      console.log("inside Place Order");
+
+      return this.http
+        .post<orderModify>(`${this.url}/insertWearHouse1`, {oid,status}, this.httpOptions)
+        .pipe(
+          first(),
+          catchError(this.errorHandlerService.handleError<orderModify>("modifyOrder"))
+        );
+    }
+
+    updateWearHouse1(oid:string, status:string): Observable<orderModify> {
+      console.log("inside Place Order");
+
+      return this.http
+        .post<orderModify>(`${this.url}/updateWearHouse1`,  {oid,status}, this.httpOptions)
+        .pipe(
+          first(),
+          catchError(this.errorHandlerService.handleError<orderModify>("modifyOrder"))
+        );
+    }
+
+    insertWearHouse2(oid:string, status:string): Observable<orderModify> {
+      console.log("inside Place Order");
+
+      return this.http
+        .post<orderModify>(`${this.url}/insertWearHouse2`,  {oid,status}, this.httpOptions)
+        .pipe(
+          first(),
+          catchError(this.errorHandlerService.handleError<orderModify>("modifyOrder"))
+        );
+    }
+
+    updateWearhouse2(oid:string, status:string): Observable<orderModify> {
+      console.log("inside Place Order");
+
+      return this.http
+        .post<orderModify>(`${this.url}/updateWearhouse2`,  {oid,status}, this.httpOptions)
+        .pipe(
+          first(),
+          catchError(this.errorHandlerService.handleError<orderModify>("modifyOrder"))
+        );
+    }
+
+    insertWearHouse3(oid:string, status:string): Observable<orderModify> {
+      console.log("inside Place Order");
+
+      return this.http
+        .post<orderModify>(`${this.url}/insertWearHouse3`,  {oid,status}, this.httpOptions)
+        .pipe(
+          first(),
+          catchError(this.errorHandlerService.handleError<orderModify>("modifyOrder"))
+        );
+    }
+
+    updateWearhouse3(oid:string, status:string): Observable<orderModify> {
+      console.log("inside Place Order");
+
+      return this.http
+        .post<orderModify>(`${this.url}/updateWearhouse3`,  {oid,status}, this.httpOptions)
+        .pipe(
+          first(),
+          catchError(this.errorHandlerService.handleError<orderModify>("modifyOrder"))
         );
     }
 

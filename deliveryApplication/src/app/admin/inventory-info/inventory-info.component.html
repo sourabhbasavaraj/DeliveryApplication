@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" routerLink="/home" routerLinkActive="active"><h1 class=""><i class="fa fa-truck mr-2"></i>D2D</h1></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,17 +7,20 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="collapse navbar-collapse justify-content-between px-lg-3">
+        <a routerLink="/dropOffPackage" class="nav-link ">Place Order</a>
+      </li>
+      <li class="collapse navbar-collapse justify-content-between px-lg-3">
         <a routerLink="/admin" class="nav-link ">Update Price</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/coupon" class="nav-link">Update coupon</a>
+        <a routerLink="/coupon" class="nav-link">Update Order Status</a>
       </li>
       <li class="collapse navbar-collapse justify-content-between px-lg-3">
-        <a href="/wareouseinfo" class=" nav-link">Update warehouse info</a>
+        <a routerLink="/wareouseinfo" class=" nav-link">Update warehouse info</a>
 
       </li>
        <li class="collapse navbar-collapse justify-content-between px-lg-3">
-        <a href="/inventoryinfo" class="nav-item nav-link">Inventory info</a>
+        <a routerLink="/inventoryinfo" class="nav-item nav-link">Inventory info</a>
        </li>
 
 
